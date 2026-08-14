@@ -1,0 +1,2 @@
+source /home/kadim/esp/airtag_v2/i2c_basic/build/gdbinit/symbols
+source /home/kadim/esp/airtag_v2/i2c_basic/build/gdbinit/connect
