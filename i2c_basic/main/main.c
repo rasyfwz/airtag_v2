@@ -43,15 +43,20 @@ static const char *TAG = "example";
 #define PWR_MGMT_2_REG              0x6C
 #define ACCEL_CONFIG1_REG           0x1C
 #define ACCEL_CONFIG2_REG           0x1D
+#define ACCEL_INTR_CTRL_REG         0x69
+#define WOM_THR_REG                 0x1F
 
 #define FIFO_CONFIG                 0x08
-#define DATA_RATE                   0x02
-#define INTERRUPT_CONFIG            0x01
+#define DATA_RATE                   0x08
+#define PERIODIC_INT                0x01
+#define WOM_INT                     0x40
 #define FIFO_RW                     0x74
 #define I2C_CONTROL                 0x40
 #define DISABLE_GYRO                0x07
 #define DISABLE_LPF                 0x08
 #define LOW_POWER_CYCLE             0x20
+#define ACCEL_WOM                   0xC0
+#define WOM_THRESHOLD               0x19
 
 #define GPIO_INPUT_INT              7
 #define GPIO_PIN_SEL                (1U << GPIO_INPUT_INT)
@@ -66,10 +71,12 @@ typedef struct {
 
 typedef struct {
     uint8_t data_rate;
-    uint8_t accel;
+    uint8_t accel_conf;
     uint8_t interrupt;
     uint8_t gyro;
     uint8_t power;
+    uint8_t threshold;
+    uint8_t accel_int;
 
 
 } imu_config_t;
@@ -116,17 +123,21 @@ static void imu_i2c_init_helper(i2c_master_dev_handle_t dev_handle, imu_config_t
     imu6500_register_write_byte(dev_handle, LP_ACCEL_ODR_REG, imu_config->data_rate);
     imu6500_register_write_byte(dev_handle, INT_ENABLE_REG, imu_config->interrupt);
     imu6500_register_write_byte(dev_handle, PWR_MGMT_2_REG, imu_config->gyro);
-    imu6500_register_write_byte(dev_handle, ACCEL_CONFIG2_REG, imu_config->accel);
+    imu6500_register_write_byte(dev_handle, ACCEL_CONFIG2_REG, imu_config->accel_conf);
     imu6500_register_write_byte(dev_handle, MPU9250_PWR_MGMT_1_REG_ADDR, imu_config->power);
+    imu6500_register_write_byte(dev_handle, WOM_THR_REG, imu_config->threshold);
+    imu6500_register_write_byte(dev_handle, ACCEL_INTR_CTRL_REG, imu_config->accel_int);
 }
 
 static void imu_init(i2c_master_dev_handle_t dev_handle) {
     imu_config_t imu_config = {
         .data_rate = DATA_RATE,
-        .interrupt = INTERRUPT_CONFIG,
+        .interrupt = WOM_INT,
         .gyro = DISABLE_GYRO,
-        .accel = DISABLE_LPF,
+        .accel_conf = DISABLE_LPF,
         .power = LOW_POWER_CYCLE,
+        .threshold = WOM_THRESHOLD,
+        .accel_int = ACCEL_WOM,
     };
     imu_i2c_init_helper(dev_handle, &imu_config);
 }

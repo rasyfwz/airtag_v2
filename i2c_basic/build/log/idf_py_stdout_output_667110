@@ -1,0 +1,243 @@
+Command: /home/kadim/.espressif/python_env/idf6.2_py3.12_env/bin/python /home/kadim/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /home/kadim/esp/airtag_v2/i2c_basic/build/i2c-basic.elf /home/kadim/esp/airtag_v2/i2c_basic/build/bootloader/bootloader.elf -m '/home/kadim/.espressif/python_env/idf6.2_py3.12_env/bin/python' '/home/kadim/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyACM0'
+[0;32mI (125) esp_image: segment 4: paddr=00033834 vaddr=4037803c sizeESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x2a (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40379126
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1548
+load:0x403c8700,len:0xda4
+load:0x403cb700,len:0x2e70
+entry 0x403c88f4
+[0;32mI (24) boot: ESP-IDF v6.1-dev-6940-g08e0d30a74a 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Aug 14 2026 12:23:48[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (29) boot: efuse block revision: v1.3[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=09034h ( 36916) map[0m
+[0;32mI (95) esp_image: segment 1: paddr=0001905c vaddr=3fc8ff00 size=02f78h ( 12152) load[0m
+[0;32mI (98) esp_image: segment 2: paddr=0001bfdc vaddr=40374000 size=0403ch ( 16444) load[0m
+[0;32mI (107) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1380ch ( 79884) map[0m
+[0;32mI (125) esp_image: segment 4: paddr=00033834 vaddr=4037803c size=07e54h ( 32340) load[0m
+[0;32mI (133) esp_image: segment 5: paddr=0003b690 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (138) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (139) boot: Disabling RNG early entropy source...[0m
+[0;32mI (151) cpu_start: Multicore app[0m
+[0;32mI (159) cpu_start: GPIO 44 and 43 are used as console UART I/O pins[0m
+[0;32mI (160) cpu_start: Pro cpu start user code[0m
+[0;32mI (160) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (161) app_init: Application information:[0m
+[0;32mI (165) app_init: Project name:     i2c-basic[0m
+[0;32mI (169) app_init: App version:      78409ed-dirty[0m
+[0;32mI (174) app_init: Compile time:     Aug 17 2026 11:17:43[0m
+[0;32mI (179) app_init: ELF file SHA256:  784dbd86a...[0m
+[0;32mI (183) app_init: ESP-IDF:          v6.1-dev-6940-g08e0d30a74a[0m
+[0;32mI (189) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (193) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (197) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (200) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (207) heap_init: At 3FC938A0 len 00055E70 (343 KiB): RAM[0m
+[0;32mI (212) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (217) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (222) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (228) spi_flash: detected chip: gd[0m
+[0;32mI (231) spi_flash: flash io: dio[0m
+[0;33mW (234) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (246) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (252) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (259) main_task: Started on CPU0[0m
+[0;32mI (259) main_task: Calling app_main()[0m
+[0;32mI (269) example: I2C initialized successfully[0m
+[0;32mI (269) example: WHO_AM_I = 70[0m
+Acceleration (x, y, z): (-12520, -15384, 4984)
+Acceleration (x, y, z): (-15408, -4864, 7304)
+Acceleration (x, y, z): (-14320, -6320, 10328)
+Acceleration (x, y, z): (-15008, -5336, 6432)
+Acceleration (x, y, z): (-16920, -8024, 8296)
+Acceleration (x, y, z): (-17704, -11560, 9848)
+Acceleration (x, y, z): (-19456, -14640, 12200)
+Acceleration (x, y, z): (-18312, -11616, 14128)
+Acceleration (x, y, z): (-19536, -9608, 9576)
+Acceleration (x, y, z): (-17168, -6960, 7576)
+Acceleration (x, y, z): (-14944, -4720, 5176)
+Acceleration (x, y, z): (-11032, -3248, 7648)
+Acceleration (x, y, z): (-9088, -1344, 8544)
+Acceleration (x, y, z): (-6464, 480, 8136)
+Acceleration (x, y, z): (-7560, -616, 9264)
+Acceleration (x, y, z): (-8952, -2312, 10856)
+Acceleration (x, y, z): (-9504, -2304, 13528)
+Acceleration (x, y, z): (-10856, -3128, 12584)
+Acceleration (x, y, z): (-11352, -2872, 9832)
+Acceleration (x, y, z): (-13792, -6728, 9632)
+Acceleration (x, y, z): (-13376, -6368, 8568)
+Acceleration (x, y, z): (-15224, -6136, 9176)
+Acceleration (x, y, z): (-15336, -7984, 8704)
+Acceleration (x, y, z): (-15112, -6008, 8664)
+Acceleration (x, y, z): (-13048, -7080, 8768)
+Acceleration (x, y, z): (-8856, -9800, 4672)
+Acceleration (x, y, z): (-9632, -1744, 6576)
+Acceleration (x, y, z): (-12608, -5112, 9936)
+Acceleration (x, y, z): (-32768, -14464, 3464)
+Acceleration (x, y, z): (-10344, -272, 6776)
+Acceleration (x, y, z): (-9088, -5392, -1136)
+Acceleration (x, y, z): (-12928, -10168, 5168)
+Acceleration (x, y, z): (-12184, -8520, 5104)
+Acceleration (x, y, z): (-17224, -7016, 6472)
+Acceleration (x, y, z): (-14776, -4256, 5856)
+Acceleration (x, y, z): (-14064, -6928, 5936)
+Acceleration (x, y, z): (-14640, -2424, 5984)
+Acceleration (x, y, z): (-17688, -13064, 9440)
+Acceleration (x, y, z): (-14608, -3496, 4352)
+Acceleration (x, y, z): (-16400, -6104, 6512)
+Acceleration (x, y, z): (-14096, -12376, 6384)
+Acceleration (x, y, z): (-14168, -7920, 5192)
+Acceleration (x, y, z): (-14112, -6920, 4336)
+Acceleration (x, y, z): (-14544, -7152, 7224)
+Acceleration (x, y, z): (-15304, -10648, 10592)
+Acceleration (x, y, z): (-16752, -10096, 8792)
+Acceleration (x, y, z): (-18032, -9448, 6288)
+Acceleration (x, y, z): (-17304, -5808, 6968)
+Acceleration (x, y, z): (-12864, -2288, 9912)
+Acceleration (x, y, z): (-13912, -4896, 8896)
+Acceleration (x, y, z): (-10320, -2160, 9096)
+Acceleration (x, y, z): (-7648, -288, 8024)
+Acceleration (x, y, z): (-9536, -2712, 8400)
+Acceleration (x, y, z): (-11416, -4320, 10952)
+Acceleration (x, y, z): (-8704, -1248, 9664)
+Acceleration (x, y, z): (-11856, -1400, 7912)
+Acceleration (x, y, z): (-11432, -2448, 11560)
+Acceleration (x, y, z): (-14496, -4432, 8032)
+Acceleration (x, y, z): (-18152, -7336, 7664)
+Acceleration (x, y, z): (-16320, -5960, 9824)
+Acceleration (x, y, z): (-15440, -4296, 9752)
+Acceleration (x, y, z): (-14784, -4280, 9856)
+Acceleration (x, y, z): (-13312, -2672, 7848)
+Acceleration (x, y, z): (-12848, -3968, 9896)
+Acceleration (x, y, z): (-13184, -6104, 9856)
+Acceleration (x, y, z): (-12184, -7064, 10064)
+Acceleration (x, y, z): (-13880, -2944, 12808)
+Acceleration (x, y, z): (-13880, -4840, 10816)
+Acceleration (x, y, z): (-12648, -2848, 10216)
+Acceleration (x, y, z): (-13424, -4928, 11432)
+Acceleration (x, y, z): (-11032, -2112, 10184)
+Acceleration (x, y, z): (-10048, -1624, 12224)
+Acceleration (x, y, z): (-10224, -1920, 10104)
+Acceleration (x, y, z): (-11152, -3872, 10296)
+Acceleration (x, y, z): (-10928, -11056, -8520)
+Acceleration (x, y, z): (-7168, 928, 14952)
+Acceleration (x, y, z): (-9064, -2008, 12840)
+Acceleration (x, y, z): (-5576, -1696, 14728)
+Acceleration (x, y, z): (-7336, -2496, 13904)
+Acceleration (x, y, z): (-5912, -1208, 17264)
+Acceleration (x, y, z): (-4072, -3832, 17768)
+Acceleration (x, y, z): (-4840, 8784, 14952)
+Acceleration (x, y, z): (-4512, -5048, 18784)
+Acceleration (x, y, z): (-6872, -5320, 14952)
+Acceleration (x, y, z): (-7904, -6048, 12440)
+Acceleration (x, y, z): (-8824, -8864, 11592)
+Acceleration (x, y, z): (-11232, -10872, 10392)
+Acceleration (x, y, z): (-11016, -11600, 12056)
+Acceleration (x, y, z): (-10704, -10392, 11312)
+Acceleration (x, y, z): (-12432, -15400, 13608)
+Acceleration (x, y, z): (-12440, -13744, 10304)
+Acceleration (x, y, z): (-15112, -13320, 11272)
+Acceleration (x, y, z): (-13960, -9360, 9888)
+Acceleration (x, y, z): (-12384, -5152, 9952)
+Acceleration (x, y, z): (-11744, -5104, 12400)
+Acceleration (x, y, z): (-11944, -4616, 14800)
+Acceleration (x, y, z): (-9288, -2328, 10728)
+Acceleration (x, y, z): (-9776, -4752, 11360)
+Acceleration (x, y, z): (-11472, -7160, 11176)
+Acceleration (x, y, z): (-12576, -9032, 7544)
+Acceleration (x, y, z): (-11784, -8440, 10800)
+Acceleration (x, y, z): (-11032, -8728, 11312)
+Acceleration (x, y, z): (-10784, -6448, 9960)
+Acceleration (x, y, z): (-10776, -8200, 9472)
+Acceleration (x, y, z): (-13960, -6704, 7240)
+Acceleration (x, y, z): (-13992, -5072, 9416)
+Acceleration (x, y, z): (-12352, -6880, 5632)
+Acceleration (x, y, z): (-12920, -8840, 7952)
+Acceleration (x, y, z): (-13192, -8440, 10360)
+Acceleration (x, y, z): (-12952, -8416, 7352)
+Acceleration (x, y, z): (-12840, -8696, 9152)
+Acceleration (x, y, z): (-12944, -9696, 10176)
+Acceleration (x, y, z): (-11552, -9040, 7784)
+Acceleration (x, y, z): (-12264, -7032, 5072)
+Acceleration (x, y, z): (-13448, -7488, 9192)
+Acceleration (x, y, z): (-12376, -5856, 6304)
+Acceleration (x, y, z): (-14032, -7064, 8584)
+Acceleration (x, y, z): (-14056, -7200, 7840)
+Acceleration (x, y, z): (-13360, -7544, 10736)
+Acceleration (x, y, z): (-12072, -6800, 6928)
+Acceleration (x, y, z): (-12976, -7072, 8864)
+Acceleration (x, y, z): (-12592, -6368, 5680)
+Acceleration (x, y, z): (-13496, -5816, 7656)
+Acceleration (x, y, z): (-13408, -4488, 6488)
+Acceleration (x, y, z): (-14064, -4336, 8504)
+Acceleration (x, y, z): (-13296, -7480, 6816)
+Acceleration (x, y, z): (-13432, -8456, 8352)
+Acceleration (x, y, z): (-13032, -6368, 11784)
+Acceleration (x, y, z): (-11080, -1472, 8232)
+Acceleration (x, y, z): (-12792, -2632, 9032)
+Acceleration (x, y, z): (-12272, -1824, 6768)
+Acceleration (x, y, z): (-12680, 224, 8776)
+Acceleration (x, y, z): (-12616, -856, 5408)
+Acceleration (x, y, z): (-14000, -384, 10256)
+Acceleration (x, y, z): (-13848, -80, 6552)
+Acceleration (x, y, z): (-14984, 992, 8216)
+Acceleration (x, y, z): (-14088, 2808, 8664)
+Acceleration (x, y, z): (-15552, 2096, 10792)
+Acceleration (x, y, z): (-13504, 1424, 10640)
+Acceleration (x, y, z): (-14120, 1296, 8352)
+Acceleration (x, y, z): (-12504, 1272, 4840)
+Acceleration (x, y, z): (-13408, 1328, 7832)
+Acceleration (x, y, z): (-13128, -1200, 8056)
+Acceleration (x, y, z): (-13216, -2856, 8000)
+Acceleration (x, y, z): (-13992, -5368, 9232)
+Acceleration (x, y, z): (-14880, -4736, 4280)
+Acceleration (x, y, z): (-13744, -5936, 4944)
+Acceleration (x, y, z): (-15808, -3960, 6064)
+Acceleration (x, y, z): (-15880, -4392, 4288)
+Acceleration (x, y, z): (-15312, -1728, 4728)
+Acceleration (x, y, z): (-16376, -4656, 3464)
+Acceleration (x, y, z): (-18440, 2120, 3848)
+Acceleration (x, y, z): (-10272, -2368, 5088)
+Acceleration (x, y, z): (-13600, -10296, 4040)
+Acceleration (x, y, z): (-12264, -7312, 5064)
+Acceleration (x, y, z): (-15856, -5232, 6104)
+Acceleration (x, y, z): (-12576, -6584, 5664)
+Acceleration (x, y, z): (-15240, -9904, 4376)
+Acceleration (x, y, z): (-12216, -9072, 4008)
+Acceleration (x, y, z): (-14280, -7688, 5376)
+Acceleration (x, y, z): (-15328, -6200, 1576)
+Acceleration (x, y, z): (-14960, -17720, 4488)
+Acceleration (x, y, z): (-17008, -9560, 8144)
+Acceleration (x, y, z): (-17760, -9976, 9488)
+Acceleration (x, y, z): (-17736, -7624, 7816)
+Acceleration (x, y, z): (-17072, -5928, 8176)
+Acceleration (x, y, z): (-14568, -6304, 8832)
+Acceleration (x, y, z): (-13136, -5744, 11056)
+Acceleration (x, y, z): (-10144, -4528, 8096)
+Acceleration (x, y, z): (-10104, -3848, 14488)
+Acceleration (x, y, z): (-10824, -5352, 10856)
+Acceleration (x, y, z): (-10264, -6880, 9168)
+Acceleration (x, y, z): (-10456, -5968, 5816)
+Acceleration (x, y, z): (192, 840, -560)
+Acceleration (x, y, z): (25424, 3776, -7944)
+Acceleration (x, y, z): (-10808, -22672, -17032)
+Acceleration (x, y, z): (-16656, 1848, 7056)
+Acceleration (x, y, z): (-4184, -3520, 4576)
+Acceleration (x, y, z): (-19080, -14640, 5792)
+Acceleration (x, y, z): (-12296, -8192, 5136)
+Acceleration (x, y, z): (-15888, -6000, 5800)
+Acceleration (x, y, z): (-14064, -7152, 6080)

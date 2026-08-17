@@ -1,0 +1,66 @@
+Command: ninja all
+[0/1] Re-running CMake...
+-- Minimal build - ON
+-- esp-idf-configdep will be used for faster recompilation
+-- Compiler launcher chain: esp-idf-configdep
+-- Building ESP-IDF components for target esp32s3
+-- KCONFIG_REPORT_VERBOSITY not set, using default
+-- Project sdkconfig file /home/kadim/esp/airtag_v2/i2c_basic/sdkconfig
+-- Compiler supported targets: xtensa-esp-elf
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Adding linker script /home/kadim/esp/esp-idf/components/esp_hal_regi2c/esp32s3/rom.regi2c.ld
+-- App "i2c-basic" version: 78409ed-dirty
+-- Setting up mbedtls configuration
+-- Linkage type is PUBLIC
+-- Adding linker script /home/kadim/esp/esp-idf/components/esp_hal_wdt/esp32s3/rom.wdt.ld
+-- Adding linker script /home/kadim/esp/esp-idf/components/esp_system/ld/esp32s3/memory.ld.in
+--   -> Preprocessing .in script: /home/kadim/esp/esp-idf/components/esp_system/ld/esp32s3/memory.ld.in
+-- Adding linker script /home/kadim/esp/esp-idf/components/esp_system/ld/esp32s3/sections.ld.in
+--   -> Preprocessing .in script: /home/kadim/esp/esp-idf/components/esp_system/ld/esp32s3/sections.ld.in
+--   -> Applying ldgen processing: /home/kadim/esp/airtag_v2/i2c_basic/build/esp-idf/esp_system/ld/sections.ld.in
+-- Adding linker script /home/kadim/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ld
+-- Adding linker script /home/kadim/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.api.ld
+-- Adding linker script /home/kadim/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.bt_funcs.ld
+-- Adding linker script /home/kadim/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.libgcc.ld
+-- Adding linker script /home/kadim/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.version.ld
+-- Adding linker script /home/kadim/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ble_master.ld
+-- Adding linker script /home/kadim/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ble_50.ld
+-- Adding linker script /home/kadim/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ble_smp.ld
+-- Adding linker script /home/kadim/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ble_dtm.ld
+-- Adding linker script /home/kadim/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ble_test.ld
+-- Adding linker script /home/kadim/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ble_scan.ld
+-- Adding linker script /home/kadim/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.libc.ld
+-- Adding linker script /home/kadim/esp/esp-idf/components/soc/esp32s3/ld/esp32s3.peripherals.ld
+-- Components: app_update bootloader bootloader_support cxx efuse esp_app_format esp_blockdev esp_bootloader_format esp_common esp_driver_dma esp_driver_gpio esp_driver_i2c esp_hal_ana_conv esp_hal_clock esp_hal_debug_assist esp_hal_dma esp_hal_gpio esp_hal_gpspi esp_hal_i2c esp_hal_mspi esp_hal_pmu esp_hal_regi2c esp_hal_rtc_timer esp_hal_security esp_hal_systimer esp_hal_timg esp_hal_touch_sens esp_hal_uart esp_hal_usb esp_hal_wdt esp_hw_support esp_libc esp_mm esp_partition esp_pm esp_ringbuf esp_rom esp_security esp_stdio esp_system esp_timer esp_usb_cdc_rom_console esptool_py freertos hal heap log main mbedtls partition_table pthread soc spi_flash xtensa
+-- Component paths: /home/kadim/esp/esp-idf/components/app_update /home/kadim/esp/esp-idf/components/bootloader /home/kadim/esp/esp-idf/components/bootloader_support /home/kadim/esp/esp-idf/components/cxx /home/kadim/esp/esp-idf/components/efuse /home/kadim/esp/esp-idf/components/esp_app_format /home/kadim/esp/esp-idf/components/esp_blockdev /home/kadim/esp/esp-idf/components/esp_bootloader_format /home/kadim/esp/esp-idf/components/esp_common /home/kadim/esp/esp-idf/components/esp_driver_dma /home/kadim/esp/esp-idf/components/esp_driver_gpio /home/kadim/esp/esp-idf/components/esp_driver_i2c /home/kadim/esp/esp-idf/components/esp_hal_ana_conv /home/kadim/esp/esp-idf/components/esp_hal_clock /home/kadim/esp/esp-idf/components/esp_hal_debug_assist /home/kadim/esp/esp-idf/components/esp_hal_dma /home/kadim/esp/esp-idf/components/esp_hal_gpio /home/kadim/esp/esp-idf/components/esp_hal_gpspi /home/kadim/esp/esp-idf/components/esp_hal_i2c /home/kadim/esp/esp-idf/components/esp_hal_mspi /home/kadim/esp/esp-idf/components/esp_hal_pmu /home/kadim/esp/esp-idf/components/esp_hal_regi2c /home/kadim/esp/esp-idf/components/esp_hal_rtc_timer /home/kadim/esp/esp-idf/components/esp_hal_security /home/kadim/esp/esp-idf/components/esp_hal_systimer /home/kadim/esp/esp-idf/components/esp_hal_timg /home/kadim/esp/esp-idf/components/esp_hal_touch_sens /home/kadim/esp/esp-idf/components/esp_hal_uart /home/kadim/esp/esp-idf/components/esp_hal_usb /home/kadim/esp/esp-idf/components/esp_hal_wdt /home/kadim/esp/esp-idf/components/esp_hw_support /home/kadim/esp/esp-idf/components/esp_libc /home/kadim/esp/esp-idf/components/esp_mm /home/kadim/esp/esp-idf/components/esp_partition /home/kadim/esp/esp-idf/components/esp_pm /home/kadim/esp/esp-idf/components/esp_ringbuf /home/kadim/esp/esp-idf/components/esp_rom /home/kadim/esp/esp-idf/components/esp_security /home/kadim/esp/esp-idf/components/esp_stdio /home/kadim/esp/esp-idf/components/esp_system /home/kadim/esp/esp-idf/components/esp_timer /home/kadim/esp/esp-idf/components/esp_usb_cdc_rom_console /home/kadim/esp/esp-idf/components/esptool_py /home/kadim/esp/esp-idf/components/freertos /home/kadim/esp/esp-idf/components/hal /home/kadim/esp/esp-idf/components/heap /home/kadim/esp/esp-idf/components/log /home/kadim/esp/airtag_v2/i2c_basic/main /home/kadim/esp/esp-idf/components/mbedtls /home/kadim/esp/esp-idf/components/partition_table /home/kadim/esp/esp-idf/components/pthread /home/kadim/esp/esp-idf/components/soc /home/kadim/esp/esp-idf/components/spi_flash /home/kadim/esp/esp-idf/components/xtensa
+-- Configuring done (7.9s)
+-- Generating done (0.4s)
+-- Build files have been written to: /home/kadim/esp/airtag_v2/i2c_basic/build
+[1/11] Building C object esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.obj
+[2/11] Linking C static library esp-idf/esp_app_format/libesp_app_format.a
+[3/11] Performing build step for 'bootloader'
+[1/1] cd /home/kadim/esp/airtag_v2/i2c_basic/build/bootloader && /home/kadim/.espressif/python_env/idf6.2_py3.12_env/bin/python /home/kadim/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/kadim/esp/airtag_v2/i2c_basic/build/bootloader/bootloader.bin
+Bootloader binary size 0x51b0 bytes. 0x2e50 bytes (36%) free.
+[4/11] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[5/11] No install step for 'bootloader'
+[6/11] Linking C static library esp-idf/main/libmain.a
+[7/11] Completed 'bootloader'
+[8/11] Generating esp-idf/esp_system/ld/sections.ld
+Skipping linker script generation, section names unchanged
+[9/11] Linking CXX executable i2c-basic.elf
+[10/11] Generating binary image from built executable
+esptool v5.3.1
+Creating ESP32-S3 image...
+Merged 3 ELF sections.
+Successfully created ESP32-S3 image.
+Generated /home/kadim/esp/airtag_v2/i2c_basic/build/i2c-basic.bin
+[11/11] cd /home/kadim/esp/airtag_v2/i2c_basic/build && /home/kadim/.espressif/python_env/idf6.2_py3.12_env/bin/python /home/kadim/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/kadim/esp/airtag_v2/i2c_basic/build/partition_table/partition-table.bin /home/kadim/esp/airtag_v2/i2c_basic/build/i2c-basic.bin
+i2c-basic.bin binary size 0x2b6e0 bytes. Smallest app partition is 0x100000 
+bytes. 0xd4920 bytes (83%) free.
