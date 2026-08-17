@@ -2579,3 +2579,987 @@ events:
       
       
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/home/kadim/esp/esp-idf/tools/cmake/toolchain_flags.cmake:179 (cmake_determine_compiler_abi)"
+      - "/home/kadim/esp/esp-idf/components/esp_libc/project_include.cmake:29 (idf_toolchain_rerun_abi_detection)"
+      - "/home/kadim/esp/esp-idf/tools/cmake/build.cmake:519 (include)"
+      - "/home/kadim/esp/esp-idf/tools/cmake/build.cmake:836 (__build_process_project_includes)"
+      - "/home/kadim/esp/esp-idf/tools/cmake/project.cmake:904 (idf_build_process)"
+      - "CMakeLists.txt:8 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/kadim/esp/airtag_v2/i2c_basic/build/CMakeFiles/CMakeScratch/TryCompile-ZwDJ9O"
+      binary: "/home/kadim/esp/airtag_v2/i2c_basic/build/CMakeFiles/CMakeScratch/TryCompile-ZwDJ9O"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "@\"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/cflags\""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "@\"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/ldflags\""
+      CMAKE_MODULE_PATH: "/home/kadim/esp/esp-idf/tools/cmake;/home/kadim/esp/esp-idf/tools/cmake/third_party"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kadim/esp/airtag_v2/i2c_basic/build/CMakeFiles/CMakeScratch/TryCompile-ZwDJ9O'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_5b5e1
+        [1/2] /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc   @"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/cflags"    -v -o CMakeFiles/cmTC_5b5e1.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        Reading specs from /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/picolibc.specs
+        rename spec link to picolibc_link
+        rename spec link_libgcc to picolibc_link_libgcc
+        rename spec cpp to picolibc_cpp
+        rename spec cc1 to picolibc_cc1
+        rename spec cc1plus to picolibc_cc1plus
+        COLLECT_GCC=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp-elf-gcc
+        Target: xtensa-esp-elf
+        Configured with: /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-esp-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --exec_prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-sysroot=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-native-system-header-dir=/include --with-headers=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-16.1.0_20260609' --disable-__cxa_atexit --enable-cxx-flags='-ffunction-sections -fdata-sections' --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --enable-plugin --disable-nls --enable-multiarch --enable-languages=c,c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes --disable-win32-utf8-manifest
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 16.1.0 (crosstool-NG esp-16.1.0_20260609) 
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-v' '-o' 'CMakeFiles/cmTC_5b5e1.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_5b5e1.dir/'
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/cc1 -quiet -v -imultilib esp32s3 -iprefix /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/ -isysroot /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf -isystem /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include -isystem /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include/../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3 /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -ftls-model=local-exec -quiet -dumpdir CMakeFiles/cmTC_5b5e1.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mdynconfig=xtensa_esp32s3.so -mlongcalls -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -o /tmp/ccOg1J88.s
+        GNU C23 (crosstool-NG esp-16.1.0_20260609) version 16.1.0 (xtensa-esp-elf)
+        	compiled by GNU C version 15.2.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.27-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/include"
+        ignoring nonexistent directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include"
+        ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/include-fixed"
+        ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include"
+        ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include/../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include-fixed
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include
+        End of search list.
+        Compiler executable checksum: b9c2a5456858aa10a4e52825180b0994
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-v' '-o' 'CMakeFiles/cmTC_5b5e1.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_5b5e1.dir/'
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32s3.so -o CMakeFiles/cmTC_5b5e1.dir/CMakeCCompilerABI.c.obj /tmp/ccOg1J88.s
+        COMPILER_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/bin/
+        LIBRARY_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-v' '-o' 'CMakeFiles/cmTC_5b5e1.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_5b5e1.dir/CMakeCCompilerABI.c.'
+        [2/2] : && /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc @"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/cflags" @"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/ldflags" -v CMakeFiles/cmTC_5b5e1.dir/CMakeCCompilerABI.c.obj -o cmTC_5b5e1   && :
+        Using built-in specs.
+        Reading specs from /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/picolibc.specs
+        rename spec link to picolibc_link
+        rename spec link_libgcc to picolibc_link_libgcc
+        rename spec cpp to picolibc_cpp
+        rename spec cc1 to picolibc_cc1
+        rename spec cc1plus to picolibc_cc1plus
+        COLLECT_GCC=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp-elf-gcc
+        COLLECT_LTO_WRAPPER=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/lto-wrapper
+        Target: xtensa-esp-elf
+        Configured with: /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-esp-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --exec_prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-sysroot=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-native-system-header-dir=/include --with-headers=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-16.1.0_20260609' --disable-__cxa_atexit --enable-cxx-flags='-ffunction-sections -fdata-sections' --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --enable-plugin --disable-nls --enable-multiarch --enable-languages=c,c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes --disable-win32-utf8-manifest
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 16.1.0 (crosstool-NG esp-16.1.0_20260609) 
+        COMPILER_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/bin/
+        LIBRARY_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-fno-rtti' '-nostartfiles' '-v' '-o' 'cmTC_5b5e1' '-dumpdir' 'cmTC_5b5e1.'
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/collect2 -plugin /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/liblto_plugin.so -plugin-opt=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccqgpg6I.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib -Tpicolibc.ld --sysroot=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32s3.so -o cmTC_5b5e1 -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0 -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0 -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib @/tmp/ccoztDJu -lgcc --start-group -lgcc -lc --end-group -lgcc
+        /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 10000000
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-fno-rtti' '-nostartfiles' '-v' '-o' 'cmTC_5b5e1' '-dumpdir' 'cmTC_5b5e1.'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/home/kadim/esp/esp-idf/tools/cmake/toolchain_flags.cmake:179 (cmake_determine_compiler_abi)"
+      - "/home/kadim/esp/esp-idf/components/esp_libc/project_include.cmake:29 (idf_toolchain_rerun_abi_detection)"
+      - "/home/kadim/esp/esp-idf/tools/cmake/build.cmake:519 (include)"
+      - "/home/kadim/esp/esp-idf/tools/cmake/build.cmake:836 (__build_process_project_includes)"
+      - "/home/kadim/esp/esp-idf/tools/cmake/project.cmake:904 (idf_build_process)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include]
+          add: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include/../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3]
+          add: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include]
+          add: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include-fixed]
+          add: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include]
+        end of search list found
+        collapse include dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/include]
+        collapse include dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include/../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3]
+        collapse include dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0/include]
+        collapse include dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include-fixed] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0/include-fixed]
+        collapse include dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/include]
+        implicit include dirs: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/include;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0/include;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0/include-fixed;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/home/kadim/esp/esp-idf/tools/cmake/toolchain_flags.cmake:179 (cmake_determine_compiler_abi)"
+      - "/home/kadim/esp/esp-idf/components/esp_libc/project_include.cmake:29 (idf_toolchain_rerun_abi_detection)"
+      - "/home/kadim/esp/esp-idf/tools/cmake/build.cmake:519 (include)"
+      - "/home/kadim/esp/esp-idf/tools/cmake/build.cmake:836 (__build_process_project_includes)"
+      - "/home/kadim/esp/esp-idf/tools/cmake/project.cmake:904 (idf_build_process)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(xtensa-esp32s3-elf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/kadim/esp/airtag_v2/i2c_basic/build/CMakeFiles/CMakeScratch/TryCompile-ZwDJ9O']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/ninja -v cmTC_5b5e1]
+        ignore line: [[1/2] /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc   @"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/cflags"    -v -o CMakeFiles/cmTC_5b5e1.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [Reading specs from /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/picolibc.specs]
+        ignore line: [rename spec link to picolibc_link]
+        ignore line: [rename spec link_libgcc to picolibc_link_libgcc]
+        ignore line: [rename spec cpp to picolibc_cpp]
+        ignore line: [rename spec cc1 to picolibc_cc1]
+        ignore line: [rename spec cc1plus to picolibc_cc1plus]
+        ignore line: [COLLECT_GCC=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp-elf-gcc]
+        ignore line: [Target: xtensa-esp-elf]
+        ignore line: [Configured with: /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-esp-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --exec_prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-sysroot=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-native-system-header-dir=/include --with-headers=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-16.1.0_20260609' --disable-__cxa_atexit --enable-cxx-flags='-ffunction-sections -fdata-sections' --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --enable-plugin --disable-nls --enable-multiarch --enable-languages=c c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes --disable-win32-utf8-manifest]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 16.1.0 (crosstool-NG esp-16.1.0_20260609) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-v' '-o' 'CMakeFiles/cmTC_5b5e1.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_5b5e1.dir/']
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/cc1 -quiet -v -imultilib esp32s3 -iprefix /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/ -isysroot /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf -isystem /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include -isystem /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include/../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3 /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -ftls-model=local-exec -quiet -dumpdir CMakeFiles/cmTC_5b5e1.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mdynconfig=xtensa_esp32s3.so -mlongcalls -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -o /tmp/ccOg1J88.s]
+        ignore line: [GNU C23 (crosstool-NG esp-16.1.0_20260609) version 16.1.0 (xtensa-esp-elf)]
+        ignore line: [	compiled by GNU C version 15.2.0  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.27-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/include"]
+        ignore line: [ignoring nonexistent directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include"]
+        ignore line: [ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include"]
+        ignore line: [ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include]
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include/../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3]
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include]
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include-fixed]
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: b9c2a5456858aa10a4e52825180b0994]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-v' '-o' 'CMakeFiles/cmTC_5b5e1.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_5b5e1.dir/']
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32s3.so -o CMakeFiles/cmTC_5b5e1.dir/CMakeCCompilerABI.c.obj /tmp/ccOg1J88.s]
+        ignore line: [COMPILER_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/bin/]
+        ignore line: [LIBRARY_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-v' '-o' 'CMakeFiles/cmTC_5b5e1.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_5b5e1.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] : && /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc @"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/cflags" @"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/ldflags" -v CMakeFiles/cmTC_5b5e1.dir/CMakeCCompilerABI.c.obj -o cmTC_5b5e1   && :]
+        ignore line: [Using built-in specs.]
+        ignore line: [Reading specs from /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/picolibc.specs]
+        ignore line: [rename spec link to picolibc_link]
+        ignore line: [rename spec link_libgcc to picolibc_link_libgcc]
+        ignore line: [rename spec cpp to picolibc_cpp]
+        ignore line: [rename spec cc1 to picolibc_cc1]
+        ignore line: [rename spec cc1plus to picolibc_cc1plus]
+        ignore line: [COLLECT_GCC=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp-elf-gcc]
+        ignore line: [COLLECT_LTO_WRAPPER=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/lto-wrapper]
+        ignore line: [Target: xtensa-esp-elf]
+        ignore line: [Configured with: /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-esp-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --exec_prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-sysroot=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-native-system-header-dir=/include --with-headers=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-16.1.0_20260609' --disable-__cxa_atexit --enable-cxx-flags='-ffunction-sections -fdata-sections' --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --enable-plugin --disable-nls --enable-multiarch --enable-languages=c c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes --disable-win32-utf8-manifest]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 16.1.0 (crosstool-NG esp-16.1.0_20260609) ]
+        ignore line: [COMPILER_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/bin/]
+        ignore line: [LIBRARY_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-fno-rtti' '-nostartfiles' '-v' '-o' 'cmTC_5b5e1' '-dumpdir' 'cmTC_5b5e1.']
+        link line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/collect2 -plugin /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/liblto_plugin.so -plugin-opt=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccqgpg6I.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib -Tpicolibc.ld --sysroot=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32s3.so -o cmTC_5b5e1 -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0 -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0 -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib @/tmp/ccoztDJu -lgcc --start-group -lgcc -lc --end-group -lgcc]
+          arg [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccqgpg6I.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib/esp32s3/no-rtti] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib/esp32s3/no-rtti]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib]
+          arg [-Tpicolibc.ld] ==> ignore
+          arg [--sysroot=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf] ==> ignore
+          arg [--dynconfig=xtensa_esp32s3.so] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_5b5e1] ==> ignore
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib]
+          arg [@/tmp/ccoztDJu] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--start-group] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [--end-group] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib/esp32s3/no-rtti] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/xtensa-esp-elf/lib/esp32s3/no-rtti]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/xtensa-esp-elf/lib]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/lib/gcc/xtensa-esp-elf/16.1.0]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/lib/esp32s3/no-rtti]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/lib/esp32s3/no-rtti]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/lib]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/lib]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/usr/lib]
+        implicit libs: [gcc;gcc;c;gcc]
+        implicit objs: []
+        implicit dirs: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/xtensa-esp-elf/lib/esp32s3/no-rtti;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/xtensa-esp-elf/lib;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/lib/gcc/xtensa-esp-elf/16.1.0;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/lib/esp32s3/no-rtti;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/lib;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/usr/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/home/kadim/esp/esp-idf/tools/cmake/toolchain_flags.cmake:179 (cmake_determine_compiler_abi)"
+      - "/home/kadim/esp/esp-idf/components/esp_libc/project_include.cmake:29 (idf_toolchain_rerun_abi_detection)"
+      - "/home/kadim/esp/esp-idf/tools/cmake/build.cmake:519 (include)"
+      - "/home/kadim/esp/esp-idf/tools/cmake/build.cmake:836 (__build_process_project_includes)"
+      - "/home/kadim/esp/esp-idf/tools/cmake/project.cmake:904 (idf_build_process)"
+      - "CMakeLists.txt:8 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/kadim/esp/airtag_v2/i2c_basic/build/CMakeFiles/CMakeScratch/TryCompile-gtXYsA"
+      binary: "/home/kadim/esp/airtag_v2/i2c_basic/build/CMakeFiles/CMakeScratch/TryCompile-gtXYsA"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "@\"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/cxxflags\""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "@\"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/ldflags\""
+      CMAKE_MODULE_PATH: "/home/kadim/esp/esp-idf/tools/cmake;/home/kadim/esp/esp-idf/tools/cmake/third_party"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kadim/esp/airtag_v2/i2c_basic/build/CMakeFiles/CMakeScratch/TryCompile-gtXYsA'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_0d8b6
+        [1/2] /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp32s3-elf-g++   @"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/cxxflags"    -v -o CMakeFiles/cmTC_0d8b6.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        Reading specs from /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/picolibc.specs
+        rename spec link to picolibc_link
+        rename spec link_libgcc to picolibc_link_libgcc
+        rename spec cpp to picolibc_cpp
+        rename spec cc1 to picolibc_cc1
+        rename spec cc1plus to picolibc_cc1plus
+        COLLECT_GCC=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp-elf-g++
+        Target: xtensa-esp-elf
+        Configured with: /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-esp-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --exec_prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-sysroot=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-native-system-header-dir=/include --with-headers=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-16.1.0_20260609' --disable-__cxa_atexit --enable-cxx-flags='-ffunction-sections -fdata-sections' --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --enable-plugin --disable-nls --enable-multiarch --enable-languages=c,c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes --disable-win32-utf8-manifest
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 16.1.0 (crosstool-NG esp-16.1.0_20260609) 
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-fno-rtti' '-ftrivial-auto-var-init=uninitialized' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-v' '-o' 'CMakeFiles/cmTC_0d8b6.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_0d8b6.dir/'
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/cc1plus -quiet -v -imultilib esp32s3/no-rtti -iprefix /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/ -isysroot /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -ftls-model=local-exec -quiet -dumpdir CMakeFiles/cmTC_0d8b6.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mdynconfig=xtensa_esp32s3.so -mlongcalls -version -fno-rtti -ftrivial-auto-var-init=uninitialized -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -isystem /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include -isystem /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include/../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti -ftls-model=local-exec -o /tmp/ccznrMrH.s
+        GNU C++20 (crosstool-NG esp-16.1.0_20260609) version 16.1.0 (xtensa-esp-elf)
+        	compiled by GNU C version 15.2.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.27-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0"
+        ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti"
+        ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0/backward"
+        ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/include"
+        ignoring nonexistent directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include"
+        ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/include-fixed"
+        ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include"
+        ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include/../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0/backward
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include-fixed
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include
+        End of search list.
+        Compiler executable checksum: 85a7f8dd41c47f7a8083a3f1ddc10697
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-fno-rtti' '-ftrivial-auto-var-init=uninitialized' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-v' '-o' 'CMakeFiles/cmTC_0d8b6.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_0d8b6.dir/'
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32s3.so -o CMakeFiles/cmTC_0d8b6.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccznrMrH.s
+        COMPILER_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/bin/
+        LIBRARY_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-fno-rtti' '-ftrivial-auto-var-init=uninitialized' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-v' '-o' 'CMakeFiles/cmTC_0d8b6.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_0d8b6.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] : && /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp32s3-elf-g++ @"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/cxxflags" @"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/ldflags" -v CMakeFiles/cmTC_0d8b6.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_0d8b6   && :
+        Using built-in specs.
+        Reading specs from /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/picolibc.specs
+        rename spec link to picolibc_link
+        rename spec link_libgcc to picolibc_link_libgcc
+        rename spec cpp to picolibc_cpp
+        rename spec cc1 to picolibc_cc1
+        rename spec cc1plus to picolibc_cc1plus
+        COLLECT_GCC=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp-elf-g++
+        COLLECT_LTO_WRAPPER=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/lto-wrapper
+        Target: xtensa-esp-elf
+        Configured with: /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-esp-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --exec_prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-sysroot=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-native-system-header-dir=/include --with-headers=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-16.1.0_20260609' --disable-__cxa_atexit --enable-cxx-flags='-ffunction-sections -fdata-sections' --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --enable-plugin --disable-nls --enable-multiarch --enable-languages=c,c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes --disable-win32-utf8-manifest
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 16.1.0 (crosstool-NG esp-16.1.0_20260609) 
+        COMPILER_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/bin/
+        LIBRARY_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-ftrivial-auto-var-init=uninitialized' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-fno-rtti' '-nostartfiles' '-v' '-o' 'cmTC_0d8b6' '-dumpdir' 'cmTC_0d8b6.'
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/collect2 -plugin /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/liblto_plugin.so -plugin-opt=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccQIh5k6.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib -Tpicolibc.ld --sysroot=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32s3.so -o cmTC_0d8b6 -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0 -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0 -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib @/tmp/ccSdeY1w -lgcc --start-group -lgcc -lc --end-group -lgcc
+        /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 10000000
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-ftrivial-auto-var-init=uninitialized' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-fno-rtti' '-nostartfiles' '-v' '-o' 'cmTC_0d8b6' '-dumpdir' 'cmTC_0d8b6.'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/home/kadim/esp/esp-idf/tools/cmake/toolchain_flags.cmake:179 (cmake_determine_compiler_abi)"
+      - "/home/kadim/esp/esp-idf/components/esp_libc/project_include.cmake:29 (idf_toolchain_rerun_abi_detection)"
+      - "/home/kadim/esp/esp-idf/tools/cmake/build.cmake:519 (include)"
+      - "/home/kadim/esp/esp-idf/tools/cmake/build.cmake:836 (__build_process_project_includes)"
+      - "/home/kadim/esp/esp-idf/tools/cmake/project.cmake:904 (idf_build_process)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include]
+          add: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include/../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti]
+          add: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0]
+          add: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti]
+          add: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0/backward]
+          add: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include]
+          add: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include-fixed]
+          add: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include]
+        end of search list found
+        collapse include dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/include]
+        collapse include dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include/../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti]
+        collapse include dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/include/c++/16.1.0]
+        collapse include dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti]
+        collapse include dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0/backward] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/include/c++/16.1.0/backward]
+        collapse include dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0/include]
+        collapse include dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include-fixed] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0/include-fixed]
+        collapse include dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/include]
+        implicit include dirs: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/include;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/include/c++/16.1.0;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/include/c++/16.1.0/backward;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0/include;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0/include-fixed;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/home/kadim/esp/esp-idf/tools/cmake/toolchain_flags.cmake:179 (cmake_determine_compiler_abi)"
+      - "/home/kadim/esp/esp-idf/components/esp_libc/project_include.cmake:29 (idf_toolchain_rerun_abi_detection)"
+      - "/home/kadim/esp/esp-idf/tools/cmake/build.cmake:519 (include)"
+      - "/home/kadim/esp/esp-idf/tools/cmake/build.cmake:836 (__build_process_project_includes)"
+      - "/home/kadim/esp/esp-idf/tools/cmake/project.cmake:904 (idf_build_process)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(xtensa-esp32s3-elf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/kadim/esp/airtag_v2/i2c_basic/build/CMakeFiles/CMakeScratch/TryCompile-gtXYsA']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/ninja -v cmTC_0d8b6]
+        ignore line: [[1/2] /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp32s3-elf-g++   @"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/cxxflags"    -v -o CMakeFiles/cmTC_0d8b6.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [Reading specs from /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/picolibc.specs]
+        ignore line: [rename spec link to picolibc_link]
+        ignore line: [rename spec link_libgcc to picolibc_link_libgcc]
+        ignore line: [rename spec cpp to picolibc_cpp]
+        ignore line: [rename spec cc1 to picolibc_cc1]
+        ignore line: [rename spec cc1plus to picolibc_cc1plus]
+        ignore line: [COLLECT_GCC=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp-elf-g++]
+        ignore line: [Target: xtensa-esp-elf]
+        ignore line: [Configured with: /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-esp-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --exec_prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-sysroot=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-native-system-header-dir=/include --with-headers=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-16.1.0_20260609' --disable-__cxa_atexit --enable-cxx-flags='-ffunction-sections -fdata-sections' --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --enable-plugin --disable-nls --enable-multiarch --enable-languages=c c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes --disable-win32-utf8-manifest]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 16.1.0 (crosstool-NG esp-16.1.0_20260609) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-fno-rtti' '-ftrivial-auto-var-init=uninitialized' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-v' '-o' 'CMakeFiles/cmTC_0d8b6.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_0d8b6.dir/']
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/cc1plus -quiet -v -imultilib esp32s3/no-rtti -iprefix /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/ -isysroot /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -ftls-model=local-exec -quiet -dumpdir CMakeFiles/cmTC_0d8b6.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mdynconfig=xtensa_esp32s3.so -mlongcalls -version -fno-rtti -ftrivial-auto-var-init=uninitialized -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -isystem /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include -isystem /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include/../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti -ftls-model=local-exec -o /tmp/ccznrMrH.s]
+        ignore line: [GNU C++20 (crosstool-NG esp-16.1.0_20260609) version 16.1.0 (xtensa-esp-elf)]
+        ignore line: [	compiled by GNU C version 15.2.0  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.27-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0"]
+        ignore line: [ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti"]
+        ignore line: [ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0/backward"]
+        ignore line: [ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/include"]
+        ignore line: [ignoring nonexistent directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include"]
+        ignore line: [ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include"]
+        ignore line: [ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include]
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include/../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti]
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0]
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti]
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0/backward]
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include]
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include-fixed]
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 85a7f8dd41c47f7a8083a3f1ddc10697]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-fno-rtti' '-ftrivial-auto-var-init=uninitialized' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-v' '-o' 'CMakeFiles/cmTC_0d8b6.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_0d8b6.dir/']
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32s3.so -o CMakeFiles/cmTC_0d8b6.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccznrMrH.s]
+        ignore line: [COMPILER_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/bin/]
+        ignore line: [LIBRARY_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-fno-rtti' '-ftrivial-auto-var-init=uninitialized' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-v' '-o' 'CMakeFiles/cmTC_0d8b6.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_0d8b6.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] : && /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp32s3-elf-g++ @"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/cxxflags" @"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/ldflags" -v CMakeFiles/cmTC_0d8b6.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_0d8b6   && :]
+        ignore line: [Using built-in specs.]
+        ignore line: [Reading specs from /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/picolibc.specs]
+        ignore line: [rename spec link to picolibc_link]
+        ignore line: [rename spec link_libgcc to picolibc_link_libgcc]
+        ignore line: [rename spec cpp to picolibc_cpp]
+        ignore line: [rename spec cc1 to picolibc_cc1]
+        ignore line: [rename spec cc1plus to picolibc_cc1plus]
+        ignore line: [COLLECT_GCC=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp-elf-g++]
+        ignore line: [COLLECT_LTO_WRAPPER=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/lto-wrapper]
+        ignore line: [Target: xtensa-esp-elf]
+        ignore line: [Configured with: /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-esp-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --exec_prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-sysroot=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-native-system-header-dir=/include --with-headers=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-16.1.0_20260609' --disable-__cxa_atexit --enable-cxx-flags='-ffunction-sections -fdata-sections' --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --enable-plugin --disable-nls --enable-multiarch --enable-languages=c c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes --disable-win32-utf8-manifest]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 16.1.0 (crosstool-NG esp-16.1.0_20260609) ]
+        ignore line: [COMPILER_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/bin/]
+        ignore line: [LIBRARY_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-ftrivial-auto-var-init=uninitialized' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-fno-rtti' '-nostartfiles' '-v' '-o' 'cmTC_0d8b6' '-dumpdir' 'cmTC_0d8b6.']
+        link line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/collect2 -plugin /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/liblto_plugin.so -plugin-opt=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccQIh5k6.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib -Tpicolibc.ld --sysroot=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32s3.so -o cmTC_0d8b6 -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0 -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0 -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib @/tmp/ccSdeY1w -lgcc --start-group -lgcc -lc --end-group -lgcc]
+          arg [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccQIh5k6.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib/esp32s3/no-rtti] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib/esp32s3/no-rtti]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib]
+          arg [-Tpicolibc.ld] ==> ignore
+          arg [--sysroot=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf] ==> ignore
+          arg [--dynconfig=xtensa_esp32s3.so] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_0d8b6] ==> ignore
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib]
+          arg [@/tmp/ccSdeY1w] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--start-group] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [--end-group] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib/esp32s3/no-rtti] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/xtensa-esp-elf/lib/esp32s3/no-rtti]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/xtensa-esp-elf/lib]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/lib/gcc/xtensa-esp-elf/16.1.0]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/lib/esp32s3/no-rtti]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/lib/esp32s3/no-rtti]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/lib]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/lib]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/usr/lib]
+        implicit libs: [gcc;gcc;c;gcc]
+        implicit objs: []
+        implicit dirs: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/xtensa-esp-elf/lib/esp32s3/no-rtti;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/xtensa-esp-elf/lib;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/lib/gcc/xtensa-esp-elf/16.1.0;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/lib/esp32s3/no-rtti;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/lib;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/usr/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/home/kadim/esp/esp-idf/tools/cmake/toolchain_flags.cmake:179 (cmake_determine_compiler_abi)"
+      - "/home/kadim/esp/esp-idf/CMakeLists.txt:89 (idf_toolchain_rerun_abi_detection)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/kadim/esp/airtag_v2/i2c_basic/build/CMakeFiles/CMakeScratch/TryCompile-Jnl9rW"
+      binary: "/home/kadim/esp/airtag_v2/i2c_basic/build/CMakeFiles/CMakeScratch/TryCompile-Jnl9rW"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "@\"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/cflags\""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "@\"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/ldflags\""
+      CMAKE_MODULE_PATH: "/home/kadim/esp/esp-idf/tools/cmake;/home/kadim/esp/esp-idf/tools/cmake/third_party"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kadim/esp/airtag_v2/i2c_basic/build/CMakeFiles/CMakeScratch/TryCompile-Jnl9rW'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_6e4d6
+        [1/2] /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc   @"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/cflags"    -v -o CMakeFiles/cmTC_6e4d6.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        Reading specs from /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/picolibc.specs
+        rename spec link to picolibc_link
+        rename spec link_libgcc to picolibc_link_libgcc
+        rename spec cpp to picolibc_cpp
+        rename spec cc1 to picolibc_cc1
+        rename spec cc1plus to picolibc_cc1plus
+        COLLECT_GCC=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp-elf-gcc
+        Target: xtensa-esp-elf
+        Configured with: /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-esp-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --exec_prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-sysroot=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-native-system-header-dir=/include --with-headers=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-16.1.0_20260609' --disable-__cxa_atexit --enable-cxx-flags='-ffunction-sections -fdata-sections' --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --enable-plugin --disable-nls --enable-multiarch --enable-languages=c,c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes --disable-win32-utf8-manifest
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 16.1.0 (crosstool-NG esp-16.1.0_20260609) 
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-v' '-o' 'CMakeFiles/cmTC_6e4d6.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_6e4d6.dir/'
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/cc1 -quiet -v -imultilib esp32s3 -iprefix /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/ -isysroot /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf -isystem /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include -isystem /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include/../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3 /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -ftls-model=local-exec -quiet -dumpdir CMakeFiles/cmTC_6e4d6.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mdynconfig=xtensa_esp32s3.so -mlongcalls -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -o /tmp/ccCcvoO8.s
+        GNU C23 (crosstool-NG esp-16.1.0_20260609) version 16.1.0 (xtensa-esp-elf)
+        	compiled by GNU C version 15.2.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.27-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/include"
+        ignoring nonexistent directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include"
+        ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/include-fixed"
+        ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include"
+        ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include/../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include-fixed
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include
+        End of search list.
+        Compiler executable checksum: b9c2a5456858aa10a4e52825180b0994
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-v' '-o' 'CMakeFiles/cmTC_6e4d6.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_6e4d6.dir/'
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32s3.so -o CMakeFiles/cmTC_6e4d6.dir/CMakeCCompilerABI.c.obj /tmp/ccCcvoO8.s
+        COMPILER_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/bin/
+        LIBRARY_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-v' '-o' 'CMakeFiles/cmTC_6e4d6.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_6e4d6.dir/CMakeCCompilerABI.c.'
+        [2/2] : && /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc @"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/cflags" @"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/ldflags" -v CMakeFiles/cmTC_6e4d6.dir/CMakeCCompilerABI.c.obj -o cmTC_6e4d6   && :
+        Using built-in specs.
+        Reading specs from /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/picolibc.specs
+        rename spec link to picolibc_link
+        rename spec link_libgcc to picolibc_link_libgcc
+        rename spec cpp to picolibc_cpp
+        rename spec cc1 to picolibc_cc1
+        rename spec cc1plus to picolibc_cc1plus
+        COLLECT_GCC=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp-elf-gcc
+        COLLECT_LTO_WRAPPER=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/lto-wrapper
+        Target: xtensa-esp-elf
+        Configured with: /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-esp-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --exec_prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-sysroot=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-native-system-header-dir=/include --with-headers=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-16.1.0_20260609' --disable-__cxa_atexit --enable-cxx-flags='-ffunction-sections -fdata-sections' --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --enable-plugin --disable-nls --enable-multiarch --enable-languages=c,c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes --disable-win32-utf8-manifest
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 16.1.0 (crosstool-NG esp-16.1.0_20260609) 
+        COMPILER_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/bin/
+        LIBRARY_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-nostartfiles' '-fno-rtti' '-v' '-o' 'cmTC_6e4d6' '-dumpdir' 'cmTC_6e4d6.'
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/collect2 -plugin /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/liblto_plugin.so -plugin-opt=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccRNLupk.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib -Tpicolibc.ld --sysroot=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32s3.so -o cmTC_6e4d6 -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0 -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0 -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib @/tmp/ccQWtbTj -lgcc --start-group -lgcc -lc --end-group -lgcc
+        /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 10000000
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-nostartfiles' '-fno-rtti' '-v' '-o' 'cmTC_6e4d6' '-dumpdir' 'cmTC_6e4d6.'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/home/kadim/esp/esp-idf/tools/cmake/toolchain_flags.cmake:179 (cmake_determine_compiler_abi)"
+      - "/home/kadim/esp/esp-idf/CMakeLists.txt:89 (idf_toolchain_rerun_abi_detection)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include]
+          add: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include/../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3]
+          add: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include]
+          add: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include-fixed]
+          add: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include]
+        end of search list found
+        collapse include dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/include]
+        collapse include dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include/../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3]
+        collapse include dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0/include]
+        collapse include dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include-fixed] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0/include-fixed]
+        collapse include dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/include]
+        implicit include dirs: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/include;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0/include;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0/include-fixed;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/home/kadim/esp/esp-idf/tools/cmake/toolchain_flags.cmake:179 (cmake_determine_compiler_abi)"
+      - "/home/kadim/esp/esp-idf/CMakeLists.txt:89 (idf_toolchain_rerun_abi_detection)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(xtensa-esp32s3-elf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/kadim/esp/airtag_v2/i2c_basic/build/CMakeFiles/CMakeScratch/TryCompile-Jnl9rW']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/ninja -v cmTC_6e4d6]
+        ignore line: [[1/2] /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc   @"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/cflags"    -v -o CMakeFiles/cmTC_6e4d6.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [Reading specs from /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/picolibc.specs]
+        ignore line: [rename spec link to picolibc_link]
+        ignore line: [rename spec link_libgcc to picolibc_link_libgcc]
+        ignore line: [rename spec cpp to picolibc_cpp]
+        ignore line: [rename spec cc1 to picolibc_cc1]
+        ignore line: [rename spec cc1plus to picolibc_cc1plus]
+        ignore line: [COLLECT_GCC=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp-elf-gcc]
+        ignore line: [Target: xtensa-esp-elf]
+        ignore line: [Configured with: /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-esp-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --exec_prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-sysroot=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-native-system-header-dir=/include --with-headers=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-16.1.0_20260609' --disable-__cxa_atexit --enable-cxx-flags='-ffunction-sections -fdata-sections' --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --enable-plugin --disable-nls --enable-multiarch --enable-languages=c c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes --disable-win32-utf8-manifest]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 16.1.0 (crosstool-NG esp-16.1.0_20260609) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-v' '-o' 'CMakeFiles/cmTC_6e4d6.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_6e4d6.dir/']
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/cc1 -quiet -v -imultilib esp32s3 -iprefix /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/ -isysroot /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf -isystem /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include -isystem /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include/../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3 /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -ftls-model=local-exec -quiet -dumpdir CMakeFiles/cmTC_6e4d6.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mdynconfig=xtensa_esp32s3.so -mlongcalls -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -o /tmp/ccCcvoO8.s]
+        ignore line: [GNU C23 (crosstool-NG esp-16.1.0_20260609) version 16.1.0 (xtensa-esp-elf)]
+        ignore line: [	compiled by GNU C version 15.2.0  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.27-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/include"]
+        ignore line: [ignoring nonexistent directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include"]
+        ignore line: [ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include"]
+        ignore line: [ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include]
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include/../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3]
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include]
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include-fixed]
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: b9c2a5456858aa10a4e52825180b0994]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-v' '-o' 'CMakeFiles/cmTC_6e4d6.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_6e4d6.dir/']
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32s3.so -o CMakeFiles/cmTC_6e4d6.dir/CMakeCCompilerABI.c.obj /tmp/ccCcvoO8.s]
+        ignore line: [COMPILER_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/bin/]
+        ignore line: [LIBRARY_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-v' '-o' 'CMakeFiles/cmTC_6e4d6.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_6e4d6.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] : && /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc @"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/cflags" @"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/ldflags" -v CMakeFiles/cmTC_6e4d6.dir/CMakeCCompilerABI.c.obj -o cmTC_6e4d6   && :]
+        ignore line: [Using built-in specs.]
+        ignore line: [Reading specs from /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/picolibc.specs]
+        ignore line: [rename spec link to picolibc_link]
+        ignore line: [rename spec link_libgcc to picolibc_link_libgcc]
+        ignore line: [rename spec cpp to picolibc_cpp]
+        ignore line: [rename spec cc1 to picolibc_cc1]
+        ignore line: [rename spec cc1plus to picolibc_cc1plus]
+        ignore line: [COLLECT_GCC=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp-elf-gcc]
+        ignore line: [COLLECT_LTO_WRAPPER=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/lto-wrapper]
+        ignore line: [Target: xtensa-esp-elf]
+        ignore line: [Configured with: /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-esp-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --exec_prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-sysroot=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-native-system-header-dir=/include --with-headers=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-16.1.0_20260609' --disable-__cxa_atexit --enable-cxx-flags='-ffunction-sections -fdata-sections' --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --enable-plugin --disable-nls --enable-multiarch --enable-languages=c c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes --disable-win32-utf8-manifest]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 16.1.0 (crosstool-NG esp-16.1.0_20260609) ]
+        ignore line: [COMPILER_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/bin/]
+        ignore line: [LIBRARY_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-nostartfiles' '-fno-rtti' '-v' '-o' 'cmTC_6e4d6' '-dumpdir' 'cmTC_6e4d6.']
+        link line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/collect2 -plugin /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/liblto_plugin.so -plugin-opt=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccRNLupk.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib -Tpicolibc.ld --sysroot=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32s3.so -o cmTC_6e4d6 -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0 -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0 -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib @/tmp/ccQWtbTj -lgcc --start-group -lgcc -lc --end-group -lgcc]
+          arg [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccRNLupk.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib/esp32s3/no-rtti] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib/esp32s3/no-rtti]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib]
+          arg [-Tpicolibc.ld] ==> ignore
+          arg [--sysroot=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf] ==> ignore
+          arg [--dynconfig=xtensa_esp32s3.so] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_6e4d6] ==> ignore
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib]
+          arg [@/tmp/ccQWtbTj] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--start-group] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [--end-group] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib/esp32s3/no-rtti] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/xtensa-esp-elf/lib/esp32s3/no-rtti]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/xtensa-esp-elf/lib]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/lib/gcc/xtensa-esp-elf/16.1.0]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/lib/esp32s3/no-rtti]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/lib/esp32s3/no-rtti]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/lib]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/lib]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/usr/lib]
+        implicit libs: [gcc;gcc;c;gcc]
+        implicit objs: []
+        implicit dirs: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/xtensa-esp-elf/lib/esp32s3/no-rtti;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/xtensa-esp-elf/lib;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/lib/gcc/xtensa-esp-elf/16.1.0;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/lib/esp32s3/no-rtti;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/lib;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/usr/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/home/kadim/esp/esp-idf/tools/cmake/toolchain_flags.cmake:179 (cmake_determine_compiler_abi)"
+      - "/home/kadim/esp/esp-idf/CMakeLists.txt:89 (idf_toolchain_rerun_abi_detection)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/kadim/esp/airtag_v2/i2c_basic/build/CMakeFiles/CMakeScratch/TryCompile-oeR1g6"
+      binary: "/home/kadim/esp/airtag_v2/i2c_basic/build/CMakeFiles/CMakeScratch/TryCompile-oeR1g6"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "@\"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/cxxflags\""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "@\"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/ldflags\""
+      CMAKE_MODULE_PATH: "/home/kadim/esp/esp-idf/tools/cmake;/home/kadim/esp/esp-idf/tools/cmake/third_party"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kadim/esp/airtag_v2/i2c_basic/build/CMakeFiles/CMakeScratch/TryCompile-oeR1g6'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_5aad0
+        [1/2] /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp32s3-elf-g++   @"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/cxxflags"    -v -o CMakeFiles/cmTC_5aad0.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        Reading specs from /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/picolibc.specs
+        rename spec link to picolibc_link
+        rename spec link_libgcc to picolibc_link_libgcc
+        rename spec cpp to picolibc_cpp
+        rename spec cc1 to picolibc_cc1
+        rename spec cc1plus to picolibc_cc1plus
+        COLLECT_GCC=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp-elf-g++
+        Target: xtensa-esp-elf
+        Configured with: /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-esp-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --exec_prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-sysroot=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-native-system-header-dir=/include --with-headers=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-16.1.0_20260609' --disable-__cxa_atexit --enable-cxx-flags='-ffunction-sections -fdata-sections' --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --enable-plugin --disable-nls --enable-multiarch --enable-languages=c,c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes --disable-win32-utf8-manifest
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 16.1.0 (crosstool-NG esp-16.1.0_20260609) 
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-ftrivial-auto-var-init=uninitialized' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-fno-rtti' '-v' '-o' 'CMakeFiles/cmTC_5aad0.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_5aad0.dir/'
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/cc1plus -quiet -v -imultilib esp32s3/no-rtti -iprefix /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/ -isysroot /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -ftls-model=local-exec -quiet -dumpdir CMakeFiles/cmTC_5aad0.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mdynconfig=xtensa_esp32s3.so -mlongcalls -version -ftrivial-auto-var-init=uninitialized -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-rtti -isystem /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include -isystem /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include/../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti -ftls-model=local-exec -o /tmp/cc4A8uv2.s
+        GNU C++20 (crosstool-NG esp-16.1.0_20260609) version 16.1.0 (xtensa-esp-elf)
+        	compiled by GNU C version 15.2.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.27-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0"
+        ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti"
+        ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0/backward"
+        ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/include"
+        ignoring nonexistent directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include"
+        ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/include-fixed"
+        ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include"
+        ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include/../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0/backward
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include-fixed
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include
+        End of search list.
+        Compiler executable checksum: 85a7f8dd41c47f7a8083a3f1ddc10697
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-ftrivial-auto-var-init=uninitialized' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-fno-rtti' '-v' '-o' 'CMakeFiles/cmTC_5aad0.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_5aad0.dir/'
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32s3.so -o CMakeFiles/cmTC_5aad0.dir/CMakeCXXCompilerABI.cpp.obj /tmp/cc4A8uv2.s
+        COMPILER_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/bin/
+        LIBRARY_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-ftrivial-auto-var-init=uninitialized' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-fno-rtti' '-v' '-o' 'CMakeFiles/cmTC_5aad0.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_5aad0.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] : && /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp32s3-elf-g++ @"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/cxxflags" @"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/ldflags" -v CMakeFiles/cmTC_5aad0.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_5aad0   && :
+        Using built-in specs.
+        Reading specs from /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/picolibc.specs
+        rename spec link to picolibc_link
+        rename spec link_libgcc to picolibc_link_libgcc
+        rename spec cpp to picolibc_cpp
+        rename spec cc1 to picolibc_cc1
+        rename spec cc1plus to picolibc_cc1plus
+        COLLECT_GCC=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp-elf-g++
+        COLLECT_LTO_WRAPPER=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/lto-wrapper
+        Target: xtensa-esp-elf
+        Configured with: /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-esp-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --exec_prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-sysroot=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-native-system-header-dir=/include --with-headers=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-16.1.0_20260609' --disable-__cxa_atexit --enable-cxx-flags='-ffunction-sections -fdata-sections' --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --enable-plugin --disable-nls --enable-multiarch --enable-languages=c,c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes --disable-win32-utf8-manifest
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 16.1.0 (crosstool-NG esp-16.1.0_20260609) 
+        COMPILER_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/bin/
+        LIBRARY_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-ftrivial-auto-var-init=uninitialized' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-nostartfiles' '-fno-rtti' '-v' '-o' 'cmTC_5aad0' '-dumpdir' 'cmTC_5aad0.'
+         /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/collect2 -plugin /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/liblto_plugin.so -plugin-opt=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccQTzBe8.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib -Tpicolibc.ld --sysroot=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32s3.so -o cmTC_5aad0 -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0 -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0 -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib @/tmp/ccGwjHHY -lgcc --start-group -lgcc -lc --end-group -lgcc
+        /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 10000000
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-ftrivial-auto-var-init=uninitialized' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-nostartfiles' '-fno-rtti' '-v' '-o' 'cmTC_5aad0' '-dumpdir' 'cmTC_5aad0.'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/home/kadim/esp/esp-idf/tools/cmake/toolchain_flags.cmake:179 (cmake_determine_compiler_abi)"
+      - "/home/kadim/esp/esp-idf/CMakeLists.txt:89 (idf_toolchain_rerun_abi_detection)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include]
+          add: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include/../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti]
+          add: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0]
+          add: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti]
+          add: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0/backward]
+          add: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include]
+          add: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include-fixed]
+          add: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include]
+        end of search list found
+        collapse include dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/include]
+        collapse include dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include/../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti]
+        collapse include dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/include/c++/16.1.0]
+        collapse include dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti]
+        collapse include dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0/backward] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/include/c++/16.1.0/backward]
+        collapse include dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0/include]
+        collapse include dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include-fixed] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0/include-fixed]
+        collapse include dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/include]
+        implicit include dirs: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/include;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/include/c++/16.1.0;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/include/c++/16.1.0/backward;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0/include;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0/include-fixed;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/home/kadim/esp/esp-idf/tools/cmake/toolchain_flags.cmake:179 (cmake_determine_compiler_abi)"
+      - "/home/kadim/esp/esp-idf/CMakeLists.txt:89 (idf_toolchain_rerun_abi_detection)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(xtensa-esp32s3-elf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/kadim/esp/airtag_v2/i2c_basic/build/CMakeFiles/CMakeScratch/TryCompile-oeR1g6']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/ninja -v cmTC_5aad0]
+        ignore line: [[1/2] /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp32s3-elf-g++   @"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/cxxflags"    -v -o CMakeFiles/cmTC_5aad0.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [Reading specs from /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/picolibc.specs]
+        ignore line: [rename spec link to picolibc_link]
+        ignore line: [rename spec link_libgcc to picolibc_link_libgcc]
+        ignore line: [rename spec cpp to picolibc_cpp]
+        ignore line: [rename spec cc1 to picolibc_cc1]
+        ignore line: [rename spec cc1plus to picolibc_cc1plus]
+        ignore line: [COLLECT_GCC=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp-elf-g++]
+        ignore line: [Target: xtensa-esp-elf]
+        ignore line: [Configured with: /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-esp-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --exec_prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-sysroot=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-native-system-header-dir=/include --with-headers=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-16.1.0_20260609' --disable-__cxa_atexit --enable-cxx-flags='-ffunction-sections -fdata-sections' --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --enable-plugin --disable-nls --enable-multiarch --enable-languages=c c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes --disable-win32-utf8-manifest]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 16.1.0 (crosstool-NG esp-16.1.0_20260609) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-ftrivial-auto-var-init=uninitialized' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-fno-rtti' '-v' '-o' 'CMakeFiles/cmTC_5aad0.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_5aad0.dir/']
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/cc1plus -quiet -v -imultilib esp32s3/no-rtti -iprefix /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/ -isysroot /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -ftls-model=local-exec -quiet -dumpdir CMakeFiles/cmTC_5aad0.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mdynconfig=xtensa_esp32s3.so -mlongcalls -version -ftrivial-auto-var-init=uninitialized -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-rtti -isystem /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include -isystem /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include/../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti -ftls-model=local-exec -o /tmp/cc4A8uv2.s]
+        ignore line: [GNU C++20 (crosstool-NG esp-16.1.0_20260609) version 16.1.0 (xtensa-esp-elf)]
+        ignore line: [	compiled by GNU C version 15.2.0  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.27-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0"]
+        ignore line: [ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti"]
+        ignore line: [ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0/backward"]
+        ignore line: [ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/include"]
+        ignore line: [ignoring nonexistent directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include"]
+        ignore line: [ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include"]
+        ignore line: [ignoring duplicate directory "/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include]
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/include/../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti]
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0]
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0/xtensa-esp-elf/esp32s3/no-rtti]
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include/c++/16.1.0/backward]
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include]
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/include-fixed]
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 85a7f8dd41c47f7a8083a3f1ddc10697]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-ftrivial-auto-var-init=uninitialized' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-fno-rtti' '-v' '-o' 'CMakeFiles/cmTC_5aad0.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_5aad0.dir/']
+        ignore line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32s3.so -o CMakeFiles/cmTC_5aad0.dir/CMakeCXXCompilerABI.cpp.obj /tmp/cc4A8uv2.s]
+        ignore line: [COMPILER_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/bin/]
+        ignore line: [LIBRARY_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-ftrivial-auto-var-init=uninitialized' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-fno-rtti' '-v' '-o' 'CMakeFiles/cmTC_5aad0.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_5aad0.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] : && /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp32s3-elf-g++ @"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/cxxflags" @"/home/kadim/esp/airtag_v2/i2c_basic/build/toolchain/ldflags" -v CMakeFiles/cmTC_5aad0.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_5aad0   && :]
+        ignore line: [Using built-in specs.]
+        ignore line: [Reading specs from /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/picolibc.specs]
+        ignore line: [rename spec link to picolibc_link]
+        ignore line: [rename spec link_libgcc to picolibc_link_libgcc]
+        ignore line: [rename spec cpp to picolibc_cpp]
+        ignore line: [rename spec cc1 to picolibc_cc1]
+        ignore line: [rename spec cc1plus to picolibc_cc1plus]
+        ignore line: [COLLECT_GCC=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp-elf-g++]
+        ignore line: [COLLECT_LTO_WRAPPER=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/lto-wrapper]
+        ignore line: [Target: xtensa-esp-elf]
+        ignore line: [Configured with: /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-esp-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --exec_prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-sysroot=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-native-system-header-dir=/include --with-headers=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-16.1.0_20260609' --disable-__cxa_atexit --enable-cxx-flags='-ffunction-sections -fdata-sections' --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --enable-plugin --disable-nls --enable-multiarch --enable-languages=c c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes --disable-win32-utf8-manifest]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 16.1.0 (crosstool-NG esp-16.1.0_20260609) ]
+        ignore line: [COMPILER_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/bin/]
+        ignore line: [LIBRARY_PATH=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-ftrivial-auto-var-init=uninitialized' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-specs=picolibc.specs' '-nostartfiles' '-fno-rtti' '-v' '-o' 'cmTC_5aad0' '-dumpdir' 'cmTC_5aad0.']
+        link line: [ /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/collect2 -plugin /home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/liblto_plugin.so -plugin-opt=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccQTzBe8.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib -Tpicolibc.ld --sysroot=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32s3.so -o cmTC_5aad0 -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0 -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0 -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib @/tmp/ccGwjHHY -lgcc --start-group -lgcc -lc --end-group -lgcc]
+          arg [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/16.1.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccQTzBe8.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib/esp32s3/no-rtti] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib/esp32s3/no-rtti]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib]
+          arg [-Tpicolibc.ld] ==> ignore
+          arg [--sysroot=/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf] ==> ignore
+          arg [--dynconfig=xtensa_esp32s3.so] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_5aad0] ==> ignore
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib]
+          arg [-L/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib] ==> dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib]
+          arg [@/tmp/ccGwjHHY] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--start-group] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [--end-group] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib/esp32s3/no-rtti] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/xtensa-esp-elf/lib/esp32s3/no-rtti]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/xtensa-esp-elf/lib] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/xtensa-esp-elf/lib]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/../picolibc/lib/gcc/xtensa-esp-elf/16.1.0] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/lib/gcc/xtensa-esp-elf/16.1.0]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib/esp32s3/no-rtti] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/lib/esp32s3/no-rtti]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/no-rtti] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/lib/esp32s3/no-rtti]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.1.0/../../../../xtensa-esp-elf/lib] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/lib]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/lib] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/lib]
+        collapse library dir [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib] ==> [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/usr/lib]
+        implicit libs: [gcc;gcc;c;gcc]
+        implicit objs: []
+        implicit dirs: [/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/xtensa-esp-elf/lib/esp32s3/no-rtti;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/xtensa-esp-elf/lib;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/picolibc/lib/gcc/xtensa-esp-elf/16.1.0;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0/esp32s3/no-rtti;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/lib/esp32s3/no-rtti;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/16.1.0;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/lib/gcc;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/lib;/home/kadim/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/xtensa-esp-elf/usr/lib]
+        implicit fwks: []
+      
+      
+...

@@ -1,7 +1,7 @@
 {
     "version":            "1.3",
     "project_name":       "i2c-basic",
-    "project_version":    "1",
+    "project_version":    "68e16f4-dirty",
     "project_path":       "/home/kadim/esp/airtag_v2/i2c_basic",
     "idf_path":           "/home/kadim/esp/esp-idf",
     "build_dir":          "/home/kadim/esp/airtag_v2/i2c_basic/build",
@@ -741,11 +741,11 @@
             "type": "LIBRARY",
             "lib": "__idf_main",
             "reqs": [],
-            "priv_reqs": [ "esp_driver_i2c" ],
+            "priv_reqs": [ "esp_driver_i2c", "esp_driver_gpio" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/kadim/esp/airtag_v2/i2c_basic/build/esp-idf/main/libmain.a",
-            "sources": [ "/home/kadim/esp/airtag_v2/i2c_basic/main/i2c_basic_example_main.c" ],
+            "sources": [ "/home/kadim/esp/airtag_v2/i2c_basic/main/main.c" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {
@@ -2772,7 +2772,7 @@
             "source": "project_components",
             "lib": "__idf_main",
             "reqs": [],
-            "priv_reqs": [ "esp_driver_i2c" ],
+            "priv_reqs": [ "esp_driver_i2c", "esp_driver_gpio" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "include_dirs": [ "." ]
