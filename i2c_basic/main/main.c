@@ -11,7 +11,8 @@
    The sensor used in this example is a MPU9250 inertial measurement unit.
 */
 #include <stdio.h>
-#include "sdkconfig.h"
+
+    #include "sdkconfig.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "freertos/queue.h"
@@ -77,9 +78,7 @@ void app_main(void)
     while (1) {
         if (xQueueReceive(gpio_evt_queue, &io_num, portMAX_DELAY)) {
             ESP_ERROR_CHECK(imu_read_accel(dev_handle, &imu));
-            ESP_ERROR_CHECK(imu_read_gyro(dev_handle, &imu));
             printf("Acceleration (x, y, z): (%hd, %hd, %hd)\n", imu.x_accel, imu.y_accel, imu.z_accel);
-            printf("Angular Velocity (x, y, z): (%hd, %hd, %hd)\n", imu.x_gyro, imu.y_gyro, imu.z_gyro);
         }
     }
 }

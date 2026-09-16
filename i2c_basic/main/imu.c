@@ -1,5 +1,7 @@
 #include "imu.h"
 #include "i2c.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
 
 #define ACCEL_XOUT_H                0x3B
 #define GYRO_XOUT_H                 0x43
@@ -37,13 +39,6 @@ static void process_accel(uint8_t *data, imu_data_t *imu)
     imu->z_accel = data[4] << 8 | data[5];
 }
 
-static void process_gyro(uint8_t *data, imu_data_t *imu)
-{
-    imu->x_gyro = data[0] << 8 | data[1];
-    imu->y_gyro = data[2] << 8 | data[3];
-    imu->z_gyro = data[4] << 8 | data[5];
-}
-
 static void imu_i2c_init_helper(i2c_master_dev_handle_t dev_handle, imu_config_t *imu_config)
 {
     i2c_register_write_byte(dev_handle, LP_ACCEL_ODR_REG, imu_config->data_rate);
@@ -65,7 +60,7 @@ void imu_init(i2c_master_dev_handle_t dev_handle)
     imu_config_t imu_config = {
         .data_rate = DATA_RATE,
         .interrupt = WOM_INT,
-        .gyro = ENABLE_GYRO,
+        .gyro = DISABLE_GYRO,
         .accel_conf = DISABLE_LPF,
         .power = LOW_POWER_CYCLE,
         .threshold = WOM_THRESHOLD,
@@ -82,16 +77,5 @@ esp_err_t imu_read_accel(i2c_master_dev_handle_t dev_handle, imu_data_t *imu)
         return ret;
     }
     process_accel(buffer, imu);
-    return ESP_OK;
-}
-
-esp_err_t imu_read_gyro(i2c_master_dev_handle_t dev_handle, imu_data_t *imu)
-{
-    uint8_t buffer[6];
-    esp_err_t ret = i2c_register_read(dev_handle, ACCEL_XOUT_H, buffer, sizeof(buffer));
-    if (ret != ESP_OK) {
-        return ret;
-    }
-    process_gyro(buffer, imu);
     return ESP_OK;
 }
