@@ -3,20 +3,25 @@
 
 cmake_minimum_required(VERSION 3.5)
 
+# If CMAKE_DISABLE_SOURCE_CHANGES is set to true and the source directory is an
+# existing directory in our source tree, calling file(MAKE_DIRECTORY) on it
+# would cause a fatal error, even though it would be a no-op.
+if(NOT EXISTS "/home/rasyafawwaz/.espressif/v5.4.2/esp-idf/components/bootloader/subproject")
+  file(MAKE_DIRECTORY "/home/rasyafawwaz/.espressif/v5.4.2/esp-idf/components/bootloader/subproject")
+endif()
 file(MAKE_DIRECTORY
-  "/home/kadim/esp/esp-idf/components/bootloader/subproject"
-  "/home/kadim/esp/airtag_v2/i2c_basic/build/bootloader"
-  "/home/kadim/esp/airtag_v2/i2c_basic/build/bootloader-prefix"
-  "/home/kadim/esp/airtag_v2/i2c_basic/build/bootloader-prefix/tmp"
-  "/home/kadim/esp/airtag_v2/i2c_basic/build/bootloader-prefix/src/bootloader-stamp"
-  "/home/kadim/esp/airtag_v2/i2c_basic/build/bootloader-prefix/src"
-  "/home/kadim/esp/airtag_v2/i2c_basic/build/bootloader-prefix/src/bootloader-stamp"
+  "/home/rasyafawwaz/esp/airtag_v2/i2c_basic/build/bootloader"
+  "/home/rasyafawwaz/esp/airtag_v2/i2c_basic/build/bootloader-prefix"
+  "/home/rasyafawwaz/esp/airtag_v2/i2c_basic/build/bootloader-prefix/tmp"
+  "/home/rasyafawwaz/esp/airtag_v2/i2c_basic/build/bootloader-prefix/src/bootloader-stamp"
+  "/home/rasyafawwaz/esp/airtag_v2/i2c_basic/build/bootloader-prefix/src"
+  "/home/rasyafawwaz/esp/airtag_v2/i2c_basic/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/home/kadim/esp/airtag_v2/i2c_basic/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/home/rasyafawwaz/esp/airtag_v2/i2c_basic/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/home/kadim/esp/airtag_v2/i2c_basic/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/home/rasyafawwaz/esp/airtag_v2/i2c_basic/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()

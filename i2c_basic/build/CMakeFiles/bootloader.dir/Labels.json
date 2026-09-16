@@ -2,34 +2,34 @@
 	"sources" : 
 	[
 		{
-			"file" : "/home/kadim/esp/airtag_v2/i2c_basic/build/CMakeFiles/bootloader"
+			"file" : "/home/rasyafawwaz/esp/airtag_v2/i2c_basic/build/CMakeFiles/bootloader"
 		},
 		{
-			"file" : "/home/kadim/esp/airtag_v2/i2c_basic/build/CMakeFiles/bootloader.rule"
+			"file" : "/home/rasyafawwaz/esp/airtag_v2/i2c_basic/build/CMakeFiles/bootloader.rule"
 		},
 		{
-			"file" : "/home/kadim/esp/airtag_v2/i2c_basic/build/CMakeFiles/bootloader-complete.rule"
+			"file" : "/home/rasyafawwaz/esp/airtag_v2/i2c_basic/build/CMakeFiles/bootloader-complete.rule"
 		},
 		{
-			"file" : "/home/kadim/esp/airtag_v2/i2c_basic/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+			"file" : "/home/rasyafawwaz/esp/airtag_v2/i2c_basic/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
 		},
 		{
-			"file" : "/home/kadim/esp/airtag_v2/i2c_basic/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+			"file" : "/home/rasyafawwaz/esp/airtag_v2/i2c_basic/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
 		},
 		{
-			"file" : "/home/kadim/esp/airtag_v2/i2c_basic/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+			"file" : "/home/rasyafawwaz/esp/airtag_v2/i2c_basic/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
 		},
 		{
-			"file" : "/home/kadim/esp/airtag_v2/i2c_basic/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+			"file" : "/home/rasyafawwaz/esp/airtag_v2/i2c_basic/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
 		},
 		{
-			"file" : "/home/kadim/esp/airtag_v2/i2c_basic/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+			"file" : "/home/rasyafawwaz/esp/airtag_v2/i2c_basic/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
 		},
 		{
-			"file" : "/home/kadim/esp/airtag_v2/i2c_basic/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+			"file" : "/home/rasyafawwaz/esp/airtag_v2/i2c_basic/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
 		},
 		{
-			"file" : "/home/kadim/esp/airtag_v2/i2c_basic/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+			"file" : "/home/rasyafawwaz/esp/airtag_v2/i2c_basic/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
 		}
 	],
 	"target" : 

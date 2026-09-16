@@ -1,0 +1,4 @@
+--- esp-idf-monitor 1.10.0 on /dev/ttyACM0 115200
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+--- 0x4037877a: esp_cpu_wait_for_intr at /home/rasyafawwaz/.espressif/v5.4.2/esp-idf/components/esp_hw_support/cpu.c:64
+
