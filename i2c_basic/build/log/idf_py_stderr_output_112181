@@ -1,2 +1,0 @@
-warning: the value '0x40' is invalid for SOC_CPU_WATCHPOINT_MAX_REGION_SIZE (defined at /home/rasyafawwaz/.espressif/v5.4.2/esp-idf/./components/soc/esp32s3/include/soc/Kconfig.soc_caps.in:414), which has type int -- assignment ignored
-info: Trying to set symbol COMPILER_ORPHAN_SECTIONS_WARNING to n, but it is currently selected by choice COMPILER_ORPHAN_SECTIONS. For setting it to n, set another choice symbol to y instead.
