@@ -76,9 +76,12 @@ void app_main(void)
     imu_init(dev_handle);
 
     while (1) {
-        if (xQueueReceive(gpio_evt_queue, &io_num, portMAX_DELAY)) {
+        // if (xQueueReceive(gpio_evt_queue, &io_num, portMAX_DELAY)) {
             ESP_ERROR_CHECK(imu_read_accel(dev_handle, &imu));
+            ESP_ERROR_CHECK(imu_read_gyro(dev_handle, &imu));
             printf("Acceleration (x, y, z): (%hd, %hd, %hd)\n", imu.x_accel, imu.y_accel, imu.z_accel);
-        }
+            printf("Gyro (x, y, z): (%hd, %hd, %hd)\n", imu.x_gyro, imu.y_gyro, imu.z_gyro);
+            vTaskDelay(pdMS_TO_TICKS(100));
+        // }
     }
 }

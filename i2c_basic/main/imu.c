@@ -21,6 +21,8 @@
 #define LOW_POWER_CYCLE             0x20
 #define ACCEL_WOM                   0xC0
 #define WOM_THRESHOLD               0x7D
+#define NOT_USED                    0x00
+#define AUTO_SELECT_CLK             0x01
 
 typedef struct {
     uint8_t data_rate;
@@ -37,6 +39,13 @@ static void process_accel(uint8_t *data, imu_data_t *imu)
     imu->x_accel = data[0] << 8 | data[1];
     imu->y_accel = data[2] << 8 | data[3];
     imu->z_accel = data[4] << 8 | data[5];
+}
+
+static void process_gyro(uint8_t *data, imu_data_t *imu)
+{
+    imu->x_gyro = data[0] << 8 | data[1];
+    imu->y_gyro = data[2] << 8 | data[3];
+    imu->z_gyro = data[4] << 8 | data[5];
 }
 
 static void imu_i2c_init_helper(i2c_master_dev_handle_t dev_handle, imu_config_t *imu_config)
@@ -59,12 +68,12 @@ void imu_init(i2c_master_dev_handle_t dev_handle)
 {
     imu_config_t imu_config = {
         .data_rate = DATA_RATE,
-        .interrupt = WOM_INT,
-        .gyro = DISABLE_GYRO,
+        .interrupt = NOT_USED,
+        .gyro = ENABLE_GYRO,
         .accel_conf = DISABLE_LPF,
-        .power = LOW_POWER_CYCLE,
-        .threshold = WOM_THRESHOLD,
-        .accel_int = ACCEL_WOM,
+        .power = AUTO_SELECT_CLK,
+        .threshold = NOT_USED,
+        .accel_int = NOT_USED,
     };
     imu_i2c_init_helper(dev_handle, &imu_config);
 }
@@ -77,5 +86,16 @@ esp_err_t imu_read_accel(i2c_master_dev_handle_t dev_handle, imu_data_t *imu)
         return ret;
     }
     process_accel(buffer, imu);
+    return ESP_OK;
+}
+
+esp_err_t imu_read_gyro(i2c_master_dev_handle_t dev_handle, imu_data_t *imu)
+{
+    uint8_t buffer[6];
+    esp_err_t ret = i2c_register_read(dev_handle, GYRO_XOUT_H, buffer, sizeof(buffer));
+    if (ret != ESP_OK) {
+        return ret;
+    }
+    process_gyro(buffer, imu);
     return ESP_OK;
 }
