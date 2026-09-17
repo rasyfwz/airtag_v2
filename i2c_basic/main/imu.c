@@ -2,6 +2,7 @@
 #include "i2c.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include <string.h>
 
 #define ACCEL_XOUT_H                0x3B
 #define GYRO_XOUT_H                 0x43
@@ -34,19 +35,19 @@ typedef struct {
     uint8_t accel_int;
 } imu_config_t;
 
-static void process_accel(uint8_t *data, imu_data_t *imu)
-{
-    imu->x_accel = data[0] << 8 | data[1];
-    imu->y_accel = data[2] << 8 | data[3];
-    imu->z_accel = data[4] << 8 | data[5];
-}
+// static void process_accel(uint8_t *data, imu_data_t *imu)
+// {
+//     imu->x_accel = data[0] << 8 | data[1];
+//     imu->y_accel = data[2] << 8 | data[3];
+//     imu->z_accel = data[4] << 8 | data[5];
+// }
 
-static void process_gyro(uint8_t *data, imu_data_t *imu)
-{
-    imu->x_gyro = data[0] << 8 | data[1];
-    imu->y_gyro = data[2] << 8 | data[3];
-    imu->z_gyro = data[4] << 8 | data[5];
-}
+// static void process_gyro(uint8_t *data, imu_data_t *imu)
+// {
+//     imu->x_gyro = data[0] << 8 | data[1];
+//     imu->y_gyro = data[2] << 8 | data[3];
+//     imu->z_gyro = data[4] << 8 | data[5];
+// }
 
 static void imu_i2c_init_helper(i2c_master_dev_handle_t dev_handle, imu_config_t *imu_config)
 {
@@ -78,24 +79,23 @@ void imu_init(i2c_master_dev_handle_t dev_handle)
     imu_i2c_init_helper(dev_handle, &imu_config);
 }
 
-esp_err_t imu_read_accel(i2c_master_dev_handle_t dev_handle, imu_data_t *imu)
+esp_err_t imu_read(i2c_master_dev_handle_t dev_handle, uint8_t *read_buffer, size_t len)
 {
-    uint8_t buffer[6];
-    esp_err_t ret = i2c_register_read(dev_handle, ACCEL_XOUT_H, buffer, sizeof(buffer));
-    if (ret != ESP_OK) {
-        return ret;
-    }
-    process_accel(buffer, imu);
-    return ESP_OK;
-}
+    uint8_t buffer_accel[6];
+    uint8_t buffer_gyro[6];
+    esp_err_t ret = i2c_register_read(dev_handle, ACCEL_XOUT_H, buffer_accel, sizeof(buffer_accel));
 
-esp_err_t imu_read_gyro(i2c_master_dev_handle_t dev_handle, imu_data_t *imu)
-{
-    uint8_t buffer[6];
-    esp_err_t ret = i2c_register_read(dev_handle, GYRO_XOUT_H, buffer, sizeof(buffer));
     if (ret != ESP_OK) {
         return ret;
     }
-    process_gyro(buffer, imu);
+
+    ret = i2c_register_read(dev_handle, GYRO_XOUT_H, buffer_gyro, sizeof(buffer_gyro));
+
+    if (ret != ESP_OK) {
+        return ret;
+    }
+
+    memcpy(read_buffer, buffer_accel, sizeof(buffer_accel));
+    memcpy(read_buffer + sizeof(buffer_accel), buffer_gyro, sizeof(buffer_gyro));
     return ESP_OK;
 }

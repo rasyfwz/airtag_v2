@@ -12,13 +12,17 @@
 */
 #include <stdio.h>
 
-    #include "sdkconfig.h"
+#include "sdkconfig.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "freertos/queue.h"
+#include "driver/uart.h"
+#include "driver/usb_serial_jtag.h"
 #include "esp_log.h"
 #include "driver/gpio.h"
 #include "i2c.h"
+#include <string.h>
+#include "esp_log.h"
 #include "imu.h"
 
 static const char *TAG = "example";
@@ -31,39 +35,71 @@ static const char *TAG = "example";
 #define GPIO_INPUT_INT              7
 #define GPIO_PIN_SEL                (1U << GPIO_INPUT_INT)
 
-static QueueHandle_t gpio_evt_queue = NULL;
+#define UART_TX_IN GPIO_NUM_43
+#define UART_RX_IN GPIO_NUM_44
+#define UART_BUF_SIZE 1024
+#define CLI_BUF_SIZE 1024
 
-static void IRAM_ATTR gpio_isr_handler(void* arg)
-{
-    uint32_t gpio_num = (uint32_t) arg;
-    xQueueSendFromISR(gpio_evt_queue, &gpio_num, NULL);
+void uart_setup(){
+    uart_config_t uart_config = {
+        .baud_rate  = 115200,
+        .data_bits  = UART_DATA_8_BITS,
+        .parity     = UART_PARITY_DISABLE,
+        .stop_bits  = UART_STOP_BITS_1,
+        .flow_ctrl  = UART_HW_FLOWCTRL_DISABLE,
+    };
+
+    uart_param_config(UART_NUM_1, &uart_config);
+
+    ESP_ERROR_CHECK(uart_set_pin(UART_NUM_1, UART_TX_IN, UART_RX_IN, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE));
+
+    ESP_ERROR_CHECK(uart_driver_install(UART_NUM_1, 1024, 0, 0, NULL, 0));
 }
 
-static void motion_interrupt_init(void)
-{
-    gpio_evt_queue = xQueueCreate(10, sizeof(uint32_t));
+void cli_setup() {
+    usb_serial_jtag_driver_config_t usb_serial_jtag_config = {
+        .rx_buffer_size = CLI_BUF_SIZE,
+        .tx_buffer_size = CLI_BUF_SIZE,
+    };
 
-    gpio_config_t io_conf = {};
-    io_conf.intr_type = GPIO_INTR_POSEDGE;
-    io_conf.pin_bit_mask = GPIO_PIN_SEL;
-    io_conf.mode = GPIO_MODE_INPUT;
-    io_conf.pull_up_en = GPIO_PULLUP_ENABLE;
-    gpio_config(&io_conf);
-    gpio_set_intr_type(GPIO_INPUT_INT, GPIO_INTR_POSEDGE);
-    gpio_install_isr_service(0);
-    gpio_isr_handler_add(GPIO_INPUT_INT, gpio_isr_handler, (void*) GPIO_INPUT_INT);
+    ESP_ERROR_CHECK(usb_serial_jtag_driver_install(&usb_serial_jtag_config));
 }
+
+// static QueueHandle_t gpio_evt_queue = NULL;
+
+// static void IRAM_ATTR gpio_isr_handler(void* arg)
+// {
+//     uint32_t gpio_num = (uint32_t) arg;
+//     xQueueSendFromISR(gpio_evt_queue, &gpio_num, NULL);
+// }
+
+// static void motion_interrupt_init(void)
+// {
+//     gpio_evt_queue = xQueueCreate(10, sizeof(uint32_t));
+
+//     gpio_config_t io_conf = {};
+//     io_conf.intr_type = GPIO_INTR_POSEDGE;
+//     io_conf.pin_bit_mask = GPIO_PIN_SEL;
+//     io_conf.mode = GPIO_MODE_INPUT;
+//     io_conf.pull_up_en = GPIO_PULLUP_ENABLE;
+//     gpio_config(&io_conf);
+//     gpio_set_intr_type(GPIO_INPUT_INT, GPIO_INTR_POSEDGE);
+//     gpio_install_isr_service(0);
+//     gpio_isr_handler_add(GPIO_INPUT_INT, gpio_isr_handler, (void*) GPIO_INPUT_INT);
+// }
 
 void app_main(void)
 {
-    imu_data_t imu;
     uint8_t who_am_i;
-    uint32_t io_num;
+    // uint32_t io_num;
+
+    uint8_t sensor_buffer[12];
+    char cli_buffer[CLI_BUF_SIZE];
 
     i2c_master_bus_handle_t bus_handle;
     i2c_master_dev_handle_t dev_handle;
 
-    motion_interrupt_init();
+    // motion_interrupt_init();
 
     ESP_ERROR_CHECK(i2c_bus_init(&bus_handle, I2C_MASTER_SDA_IO, I2C_MASTER_SCL_IO, I2C_MASTER_NUM));
     ESP_ERROR_CHECK(i2c_device_add(bus_handle, MPU9250_SENSOR_ADDR, I2C_MASTER_FREQ_HZ, &dev_handle));
@@ -74,14 +110,12 @@ void app_main(void)
     ESP_LOGI(TAG, "WHO_AM_I = %X", who_am_i);
 
     imu_init(dev_handle);
+    uart_setup();
+    cli_setup();
 
     while (1) {
-        // if (xQueueReceive(gpio_evt_queue, &io_num, portMAX_DELAY)) {
-            ESP_ERROR_CHECK(imu_read_accel(dev_handle, &imu));
-            ESP_ERROR_CHECK(imu_read_gyro(dev_handle, &imu));
-            printf("Acceleration (x, y, z): (%hd, %hd, %hd)\n", imu.x_accel, imu.y_accel, imu.z_accel);
-            printf("Gyro (x, y, z): (%hd, %hd, %hd)\n", imu.x_gyro, imu.y_gyro, imu.z_gyro);
-            vTaskDelay(pdMS_TO_TICKS(100));
-        // }
+        ESP_ERROR_CHECK(imu_read(dev_handle, sensor_buffer, 12));
+        // int len = usb_serial_jtag_read_bytes(cli_buffer, (CLI_BUF_SIZE - 1), 20 / portTICK_PERIOD_MS);
+        uart_write_bytes(UART_NUM_1, sensor_buffer, sizeof(sensor_buffer));
     }
 }
