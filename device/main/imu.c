@@ -3,6 +3,7 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include <string.h>
+#include "esp_log.h"
 
 #define ACCEL_XOUT_H                0x3B
 #define GYRO_XOUT_H                 0x43
@@ -94,8 +95,15 @@ esp_err_t imu_read(i2c_master_dev_handle_t dev_handle, uint8_t *read_buffer, siz
     if (ret != ESP_OK) {
         return ret;
     }
+    
+    static const uint8_t preamble[2] = {0xAA, 0x55};
 
-    memcpy(read_buffer, buffer_accel, sizeof(buffer_accel));
-    memcpy(read_buffer + sizeof(buffer_accel), buffer_gyro, sizeof(buffer_gyro));
+    if (len < sizeof(preamble) + sizeof(buffer_accel) + sizeof(buffer_gyro)) {
+        ESP_LOGI("Error:", "read buffer too small.");
+    } else {
+        memcpy(read_buffer, preamble, sizeof(preamble));
+        memcpy(read_buffer + sizeof(preamble), buffer_accel, sizeof(buffer_accel));
+        memcpy(read_buffer + sizeof(preamble) + sizeof(buffer_accel), buffer_gyro, sizeof(buffer_gyro));
+    }
     return ESP_OK;
 }

@@ -93,8 +93,7 @@ void app_main(void)
     uint8_t who_am_i;
     // uint32_t io_num;
 
-    uint8_t sensor_buffer[12];
-    char cli_buffer[CLI_BUF_SIZE];
+    uint8_t sensor_buffer[14];
 
     i2c_master_bus_handle_t bus_handle;
     i2c_master_dev_handle_t dev_handle;
@@ -114,8 +113,7 @@ void app_main(void)
     cli_setup();
 
     while (1) {
-        ESP_ERROR_CHECK(imu_read(dev_handle, sensor_buffer, 12));
-        // int len = usb_serial_jtag_read_bytes(cli_buffer, (CLI_BUF_SIZE - 1), 20 / portTICK_PERIOD_MS);
+        ESP_ERROR_CHECK(imu_read(dev_handle, sensor_buffer, sizeof(sensor_buffer)));
         uart_write_bytes(UART_NUM_1, sensor_buffer, sizeof(sensor_buffer));
     }
 }
