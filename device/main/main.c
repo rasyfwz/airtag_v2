@@ -95,6 +95,10 @@ void app_main(void)
 
     uint8_t sensor_buffer[14];
 
+    #ifdef DEBUG
+    imu_data_t imu;
+    #endif
+
     i2c_master_bus_handle_t bus_handle;
     i2c_master_dev_handle_t dev_handle;
 
@@ -115,5 +119,12 @@ void app_main(void)
     while (1) {
         ESP_ERROR_CHECK(imu_read(dev_handle, sensor_buffer, sizeof(sensor_buffer)));
         uart_write_bytes(UART_NUM_1, sensor_buffer, sizeof(sensor_buffer));
+
+        #ifdef DEBUG
+        process_imu(sensor_buffer, &imu);
+        printf("acceleration (x, y, z), %")
+        #endif
+
+
     }
 }

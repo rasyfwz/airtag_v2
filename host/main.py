@@ -1,5 +1,8 @@
-import serial
+import serial 
 import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
+import random
 
 def processBuffer(buffer, x, y, z, bias):
 
@@ -11,9 +14,6 @@ def processBuffer(buffer, x, y, z, bias):
     y.append(float(raw_value_y / bias))
     z.append(float(raw_value_z / bias))
 
-def 
-
-
 
 
 if __name__ == '__main__':
@@ -21,9 +21,8 @@ if __name__ == '__main__':
 
     if ser.is_open:
         print("Port is open")
-        ser.close()
-    
-    ser.open()
+    else:
+        ser.open()
     
     data_buffer = bytearray()
     x_accel = []
@@ -36,6 +35,7 @@ if __name__ == '__main__':
     
 
     preamble = bytearray(b'\xaa\x55')
+
     # print(ser.out_waiting)
     while True:
         read = ser.read()
@@ -55,6 +55,11 @@ if __name__ == '__main__':
 
             print(f'Acceleration (x, y, z): {x_accel[-1]}, {y_accel[-1]} {z_accel[-1]}')
             print(f'Angular Velocity (x, y, z): {x_gyro[-1]}, {y_gyro[-1]} {z_gyro[-1]}')
+
+            # plt.show()
+
+
+
 
 
         except ValueError:

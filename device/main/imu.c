@@ -36,19 +36,18 @@ typedef struct {
     uint8_t accel_int;
 } imu_config_t;
 
-// static void process_accel(uint8_t *data, imu_data_t *imu)
-// {
-//     imu->x_accel = data[0] << 8 | data[1];
-//     imu->y_accel = data[2] << 8 | data[3];
-//     imu->z_accel = data[4] << 8 | data[5];
-// }
+#ifdef DEBUG
+typedef struct {
+    int16_t x_accel;
+    int16_t y_accel;
+    int16_t z_accel;
+    int16_t x_gyro;
+    int16_t y_gyro;
+    int16_t z_gyro;
+} imu_data_t;
 
-// static void process_gyro(uint8_t *data, imu_data_t *imu)
-// {
-//     imu->x_gyro = data[0] << 8 | data[1];
-//     imu->y_gyro = data[2] << 8 | data[3];
-//     imu->z_gyro = data[4] << 8 | data[5];
-// }
+
+#endif
 
 static void imu_i2c_init_helper(i2c_master_dev_handle_t dev_handle, imu_config_t *imu_config)
 {
@@ -95,7 +94,7 @@ esp_err_t imu_read(i2c_master_dev_handle_t dev_handle, uint8_t *read_buffer, siz
     if (ret != ESP_OK) {
         return ret;
     }
-    
+
     static const uint8_t preamble[2] = {0xAA, 0x55};
 
     if (len < sizeof(preamble) + sizeof(buffer_accel) + sizeof(buffer_gyro)) {
@@ -107,3 +106,17 @@ esp_err_t imu_read(i2c_master_dev_handle_t dev_handle, uint8_t *read_buffer, siz
     }
     return ESP_OK;
 }
+#ifdef DEBUG
+void process_imu(uint8_t * data,  imu_data_t * imu) {
+    imu->x_accel = (data[2] << 8 | data[3]) / 16384.0;
+    imu->y_accel = (data[4] << 8 | data[5]) / 16384.0;
+    imu->z_accel = (data[6] << 8 | data[7]) / 16384.0;
+
+    imu->x_gyro = (data[8] << 8 | data[9]) / 28571.0;
+    imu->y_gyro = data[10] << 8 | data[11];
+    imu->z_gyro = data[12] << 8 | data[13];
+
+
+}
+
+#endif
