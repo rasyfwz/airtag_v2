@@ -1,9 +1,0 @@
-.vscode/
-build/
-sdkconfig
-sdkconfig.old
-.venv
-host/*.o
-host/*.d
-host/main
-host/imu_monitor
