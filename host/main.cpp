@@ -59,8 +59,8 @@ void readerLoop(SerialPort& port, SharedOrientation& shared) {
 
 } // namespace
 
-int main() {
-    SerialPort port("/dev/ttyUSB0", B115200);
+int main(int argc, char * argv[]) {
+    SerialPort port(argv[1], B115200);
     printf("Port is open\n");
 
     SharedOrientation shared;
